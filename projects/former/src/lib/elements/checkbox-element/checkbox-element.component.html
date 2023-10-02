@@ -1,0 +1,11 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div [formGroup]="formGroup" class="mt-4 flex align-items-center gap-1">
+  <p-checkbox [formControlName]="key" [value]="field.value" [id]="key"></p-checkbox>
+  <label for="{{key}}">{{field.title}}</label>
+  <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+</div>

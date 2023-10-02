@@ -1,0 +1,16 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div class="flex flex-row justify-content-between flex-wrap">
+  <div  class="mt-2 flex align-items-center justify-content-center gap-1">
+    <button *ngFor="let action of leftActions" pButton [label]="action.value.label" [disabled]="action.value.disabled" (click)="onButtonClick(action.value)"></button>
+  </div>
+
+  <div  class="mt-2 flex align-items-center justify-content-center gap-1">
+    <button *ngFor="let action of rightActions" pButton [label]="action.value.label" [disabled]="action.value.disabled" (click)="onButtonClick(action.value)"></button>
+  </div>
+</div>
+

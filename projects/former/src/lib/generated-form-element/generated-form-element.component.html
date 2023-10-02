@@ -1,0 +1,19 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div [ngSwitch]="element.value.type">
+  <lib-text-element *ngSwitchCase="ElementType.TextElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-element>
+  <lib-text-area-element *ngSwitchCase="ElementType.TextAreaElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-area-element>
+  <lib-number-element *ngSwitchCase="ElementType.NumberElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-number-element>
+  <lib-group-element *ngSwitchCase="ElementType.GroupElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-group-element>
+  <lib-calendar-element *ngSwitchCase="ElementType.CalendarElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-calendar-element>
+  <lib-dropdown-element *ngSwitchCase="ElementType.DropdownElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-dropdown-element>
+  <lib-checkbox-element *ngSwitchCase="ElementType.CheckboxElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-checkbox-element>
+  <lib-input-group-element *ngSwitchCase="ElementType.InputGroupElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-input-group-element>
+  <lib-autocomplete-element *ngSwitchCase="ElementType.AutocompleteElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-autocomplete-element>
+  <lib-card-element *ngSwitchCase="ElementType.CardElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-card-element>
+  <div lib-grid-layout-element *ngSwitchCase="ElementType.GridLayoutElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></div>
+</div>

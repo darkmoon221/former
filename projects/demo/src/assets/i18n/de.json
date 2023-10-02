@@ -1,0 +1,16 @@
+{
+  "VALIDATION": {
+    "TEXT": {
+      "REQUIRED": "Text wird benötigt"
+    },
+    "EMAIL": {
+      "REQUIRED": "Email wird benötigt",
+      "EMAIL": "Email muss eine valide E-Mail Adresse sein"
+    },
+    "NAME": {
+      "REQUIRED": "Name wird benötigt",
+      "PATTERN": "Name muss folgendem Format entsprechen: {{pattern}}",
+      "MIN_LENGTH": "Name muss mindestens {{minLength}} Zeichen haben"
+    }
+  }
+}

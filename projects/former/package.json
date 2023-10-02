@@ -1,0 +1,34 @@
+{
+  "name": "@kronscht/former",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "primeng": ">=16.1.0",
+    "primeflex": ">=3.3.1",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": true,
+  "description": "Former is an Angular library that provides a declarative way to generate complex forms based on primeng components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkmoon221/former.git"
+  },
+  "keywords": [
+    "angular",
+    "forms",
+    "former"
+  ],
+  "author": "Tobias Kronschnabl <dev.kronschnabl@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/darkmoon221/former/issues"
+  },
+  "homepage": "https://github.com/darkmoon221/former#readme"
+}

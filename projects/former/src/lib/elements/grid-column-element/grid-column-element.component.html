@@ -1,0 +1,10 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<ng-container *ngFor="let element of field.elements | keyvalue: originalOrder">
+  <div lib-generated-form-element [formGroup]="formGroup" [element]="element" [parentKey]="key"></div>
+</ng-container>
+

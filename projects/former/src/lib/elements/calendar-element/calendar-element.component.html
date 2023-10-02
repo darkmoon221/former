@@ -1,0 +1,19 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div [formGroup]="formGroup">
+  <span class="p-float-label mt-4">
+    <p-calendar
+      [id]="key"
+      [name]="key"
+      [formControlName]="key"
+      [dateFormat]="element.value.dateFormat"
+      [styleClass]="'p-inputtext-sm w-full'"
+    ></p-calendar>
+     <label [for]="key">{{element.value.title}}</label>
+  </span>
+  <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+</div>

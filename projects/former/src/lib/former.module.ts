@@ -1,0 +1,87 @@
+/*
+ * Apache-2.0 Licence
+ * Copyright (c) 2023 Tobias Kronschnabl
+ *
+ * Please see LICENCE for complete licence text.
+ */
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {TranslateModule} from '@ngx-translate/core';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {ButtonModule} from 'primeng/button';
+import {CalendarModule} from 'primeng/calendar';
+import {CardModule} from 'primeng/card';
+import {CheckboxModule} from 'primeng/checkbox';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {KeyFilterModule} from 'primeng/keyfilter';
+import {MessageModule} from 'primeng/message';
+import {CalendarElementComponent} from './elements/calendar-element/calendar-element.component';
+import {DropdownElementComponent} from './elements/dropdown-element/dropdown-element.component';
+import {GridLayoutElementComponent} from './elements/grid-layout-element/grid-layout-element.component';
+import {GroupElementComponent} from './elements/group-element/group-element.component';
+import {InputGroupElementComponent} from './elements/input-group-element/input-group-element.component';
+import {TextElementComponent} from './elements/text-element/text-element.component';
+import {GeneratedFormElementComponent} from './generated-form-element/generated-form-element.component';
+import {GeneratedFormComponent} from './generated-form/generated-form.component';
+import { GridColumnElementComponent } from './elements/grid-column-element/grid-column-element.component';
+import { AutocompleteElementComponent } from './elements/autocomplete-element/autocomplete-element.component';
+import { CheckboxElementComponent } from './elements/checkbox-element/checkbox-element.component';
+import { GeneratedFormActionsComponent } from './generated-form-actions/generated-form-actions.component';
+import { ValidationErrorComponent } from './elements/validation-error/validation-error.component';
+import { CardElementComponent } from './elements/card-element/card-element.component';
+import { NumberElementComponent } from './elements/number-element/number-element.component';
+import { TextAreaElementComponent } from './elements/text-area-element/text-area-element.component';
+
+const primeng = [
+  CardModule,
+  InputTextModule,
+  CalendarModule,
+  DropdownModule,
+  MessageModule,
+  KeyFilterModule,
+  AutoCompleteModule,
+  CheckboxModule,
+  ButtonModule,
+  InputNumberModule,
+  InputTextareaModule
+];
+
+@NgModule({
+  declarations: [
+    GeneratedFormComponent,
+    GeneratedFormElementComponent,
+    TextElementComponent,
+    GroupElementComponent,
+    CalendarElementComponent,
+    DropdownElementComponent,
+    InputGroupElementComponent,
+    GridLayoutElementComponent,
+    GridColumnElementComponent,
+    AutocompleteElementComponent,
+    CheckboxElementComponent,
+    GeneratedFormActionsComponent,
+    ValidationErrorComponent,
+    CardElementComponent,
+    NumberElementComponent,
+    TextAreaElementComponent
+  ],
+  imports: [
+    CommonModule,
+    TranslateModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ...primeng
+  ],
+  exports: [
+    GeneratedFormComponent,
+    GeneratedFormActionsComponent,
+    ...primeng
+  ]
+})
+export class FormerModule {
+}

@@ -1,0 +1,11 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div *ngIf="control?.invalid">
+  <div *ngFor="let validator of field?.validators">
+    <small *ngIf="control?.hasError(validator.validationType)" [id]="key + '-message'" class="p-error">{{validator.messageKey | translate: validator.messageArgs}}</small>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div>
+  <form [formGroup]="form">
+    <div *ngFor="let element of formDefinition.elements | keyvalue: originalOrder">
+      <div lib-generated-form-element [element]="element" [formGroup]="form"></div>
+    </div>
+  </form>
+</div>
