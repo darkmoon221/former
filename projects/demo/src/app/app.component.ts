@@ -32,6 +32,10 @@ export class AppComponent {
     {
       label: 'Layout example',
       routerLink: 'layout'
+    },
+    {
+      label: 'Actions example',
+      routerLink: 'actions'
     }
   ];
 

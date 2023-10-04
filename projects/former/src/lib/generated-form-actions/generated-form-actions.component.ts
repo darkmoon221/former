@@ -36,6 +36,10 @@ export class GeneratedFormActionsComponent implements OnInit, OnChanges {
     }
   }
 
+  isButtonDisabled(action: KeyValue<string, ActionButton>) {
+    return this.form?.isButtonDisabled(action);
+  }
+
   ngOnInit(): void {
     this.initActions();
   }

@@ -132,6 +132,7 @@ export interface GridColumnElement extends LayoutElement {
 
 export enum ActionType {
   Button = 'button',
+  Submit = 'submit',
   CancelButton = 'cancel-button'
 }
 
@@ -150,14 +151,24 @@ export interface FormButton extends AlignableButton, DisableElement {
   label: string
 }
 
+export interface SubmitButton extends AlignableButton, DisableElement {
+  type: ActionType.Submit,
+  label: string
+}
+
 export interface CancelButton extends AlignableButton, DisableElement {
   type: ActionType.CancelButton,
   label: string
 }
 
-export type ActionButton = FormButton | CancelButton;
+export type ActionButton = FormButton | SubmitButton | CancelButton;
 
 export type Actions = { [key: string]: (ActionButton) };
+
+export interface ActionResult {
+  action: ActionButton,
+  payload: any
+}
 
 // endregion
 
