@@ -8,7 +8,7 @@ import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
 import {KeyFilterPattern} from 'primeng/keyfilter';
 import {Observable} from 'rxjs';
 
-export enum ElementType {
+export const enum ElementType {
   TextElement = 'text',
   TextAreaElement = 'textArea',
   NumberElement = 'number',
@@ -60,7 +60,7 @@ export interface TextAreaElement extends BaseElement, DisableElement {
   cols?: number;
 }
 
-export enum NumberMode {
+export const enum NumberMode {
   Decimal = 'decimal',
   Currency = 'currency'
 }
@@ -130,7 +130,7 @@ export interface GridColumnElement extends LayoutElement {
 
 // region Buttons
 
-export enum ActionType {
+export const enum ActionType {
   Button = 'button',
   Submit = 'submit',
   CancelButton = 'cancel-button'
@@ -140,7 +140,7 @@ export interface AlignableButton {
   align?: Align;
 }
 
-export enum Align {
+export const enum Align {
   left = 'left',
   right = 'right',
   center = 'center'
@@ -174,7 +174,7 @@ export interface ActionResult {
 
 // region Validation
 
-export enum ValidationType {
+export const enum ValidationType {
   Min = 'min',
   Max = 'max',
   Required = 'required',
