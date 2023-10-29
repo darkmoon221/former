@@ -5,7 +5,7 @@
  * Please see LICENCE for complete licence text.
  */
 import {AfterContentChecked, ChangeDetectorRef, Component, inject} from '@angular/core';
-import {Elements, ElementType, FormDefinition} from '../../../../former/src/lib/model/former.model';
+import {ElementType, Elements, FormDefinition } from 'former';
 
 @Component({
   selector: 'app-layout-example',

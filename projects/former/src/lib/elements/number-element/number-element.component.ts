@@ -5,8 +5,9 @@
  * Please see LICENCE for complete licence text.
  */
 import {Component, OnInit} from '@angular/core';
-import {NumberElement, NumberMode} from '../../model/former.model';
+import {NumberElement} from '../../model/former.model';
 import {BaseElementComponent} from '../base-element.component';
+import { NumberMode } from '../../model/former.enum';
 
 
 @Component({

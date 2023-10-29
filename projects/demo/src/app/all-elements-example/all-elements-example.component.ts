@@ -5,9 +5,9 @@
  * Please see LICENCE for complete licence text.
  */
 import {AfterContentChecked, ChangeDetectorRef, Component, inject} from '@angular/core';
+import {ElementType, FormDefinition } from 'former';
 import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
 import {of} from 'rxjs';
-import {ElementType, FormDefinition} from '../../../../former/src/lib/model/former.model';
 
 @Component({
   selector: 'app-all-elements-example',

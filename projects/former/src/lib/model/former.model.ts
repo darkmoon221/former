@@ -7,21 +7,7 @@
 import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
 import {KeyFilterPattern} from 'primeng/keyfilter';
 import {Observable} from 'rxjs';
-
-export const enum ElementType {
-  TextElement = 'text',
-  TextAreaElement = 'textArea',
-  NumberElement = 'number',
-  GroupElement = 'group',
-  CalendarElement = 'calendar',
-  DropdownElement = 'dropdown',
-  InputGroupElement = 'inputGroup',
-  GridLayoutElement = 'gridLayout',
-  GridColumnElement = 'gridColumn',
-  AutocompleteElement = 'autocomplete',
-  CheckboxElement = 'checkbox',
-  CardElement = 'card'
-}
+import {ActionType, Align, ElementType, NumberMode, ValidationType} from './former.enum';
 
 export interface FormDefinition {
   title?: string,
@@ -60,10 +46,6 @@ export interface TextAreaElement extends BaseElement, DisableElement {
   cols?: number;
 }
 
-export const enum NumberMode {
-  Decimal = 'decimal',
-  Currency = 'currency'
-}
 
 export interface NumberElement extends BaseElement, DisableElement {
   type: ElementType.NumberElement;
@@ -130,20 +112,9 @@ export interface GridColumnElement extends LayoutElement {
 
 // region Buttons
 
-export const enum ActionType {
-  Button = 'button',
-  Submit = 'submit',
-  CancelButton = 'cancel-button'
-}
 
 export interface AlignableButton {
   align?: Align;
-}
-
-export const enum Align {
-  left = 'left',
-  right = 'right',
-  center = 'center'
 }
 
 export interface FormButton extends AlignableButton, DisableElement {
@@ -173,16 +144,6 @@ export interface ActionResult {
 // endregion
 
 // region Validation
-
-export const enum ValidationType {
-  Min = 'min',
-  Max = 'max',
-  Required = 'required',
-  Email = 'email',
-  MinLength = 'minlength',
-  MaxLength = 'maxlength',
-  Pattern = 'pattern'
-}
 
 export type FormValidator = RequiredFormValidator | MinLengthFormValidator | MaxLengthFormValidator | MinFormValidator | MaxFormValidator | PatternFormValidator | EmailFormValidator
 

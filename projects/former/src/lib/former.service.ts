@@ -6,7 +6,8 @@
  */
 import {inject, Injectable} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
-import {BaseElement, Element, Elements, ElementType, FormDefinition, MaxFormValidator, MaxLengthFormValidator, MinFormValidator, MinLengthFormValidator, PatternFormValidator, ValidationType} from './model/former.model';
+import {ElementType, ValidationType} from './model/former.enum';
+import {BaseElement, Element, Elements, FormDefinition, MaxFormValidator, MaxLengthFormValidator, MinFormValidator, MinLengthFormValidator, PatternFormValidator} from './model/former.model';
 
 @Injectable({
   providedIn: 'root'

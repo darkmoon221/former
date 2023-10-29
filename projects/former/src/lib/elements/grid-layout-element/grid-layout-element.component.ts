@@ -6,7 +6,8 @@
  */
 import {KeyValue} from '@angular/common';
 import {Component} from '@angular/core';
-import {ElementType, GridLayoutElement, LayoutElement} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
+import {GridLayoutElement, LayoutElement} from '../../model/former.model';
 import {BaseElementComponent} from '../base-element.component';
 
 @Component({

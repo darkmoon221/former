@@ -1,6 +1,6 @@
 {
   "name": "@kronscht/former",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^16.1.0",
     "@angular/compiler": "^16.1.0",

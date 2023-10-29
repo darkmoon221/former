@@ -8,7 +8,8 @@ import {KeyValue} from '@angular/common';
 import {AfterContentChecked, ChangeDetectorRef, Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {FormerService} from '../former.service';
-import {ActionButton, ActionResult, ActionType, FormDefinition} from '../model/former.model';
+import {ActionType} from '../model/former.enum';
+import {ActionButton, ActionResult, FormDefinition} from '../model/former.model';
 
 @Component({
   selector: 'lib-generated-form',

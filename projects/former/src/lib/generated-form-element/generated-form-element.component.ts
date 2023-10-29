@@ -7,7 +7,8 @@
 import {KeyValue} from '@angular/common';
 import {Component, Input} from '@angular/core';
 import {FormGroup} from '@angular/forms';
-import {Element, ElementType} from '../model/former.model';
+import {ElementType} from '../model/former.enum';
+import {Element} from '../model/former.model';
 
 @Component({
   selector: '[lib-generated-form-element]',
@@ -24,7 +25,7 @@ export class GeneratedFormElementComponent {
   @Input() class!: string;
 
   get anyElement(): any {
-    return this.element as any
+    return this.element as any;
   }
 
 }

@@ -6,8 +6,7 @@
  */
 import {AfterContentChecked, ChangeDetectorRef, Component, inject, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {Align, ElementType, FormDefinition, GeneratedFormComponent, ValidationType} from 'former';
-import {ActionResult, ActionType} from '../../../../former/src/lib/model/former.model';
+import {ActionResult, ActionType, Align, ElementType, FormDefinition, GeneratedFormComponent, ValidationType} from 'former';
 
 @Component({
   selector: 'app-action-example',

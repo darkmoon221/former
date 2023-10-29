@@ -8,7 +8,8 @@ import {KeyValue} from '@angular/common';
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import FormerUtils from '../former.utils';
 import {GeneratedFormComponent} from '../generated-form/generated-form.component';
-import {ActionButton, Align} from '../model/former.model';
+import {Align} from '../model/former.enum';
+import {ActionButton} from '../model/former.model';
 
 @Component({
   selector: 'lib-generated-form-actions',
