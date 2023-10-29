@@ -5,8 +5,7 @@
  * Please see LICENCE for complete licence text.
  */
 import {AfterContentChecked, ChangeDetectorRef, Component, inject} from '@angular/core';
-import {FormDefinition} from 'former';
-import { ElementType, ValidationType } from 'projects/former';
+import {ElementType, FormDefinition, ValidationType} from 'former';
 
 @Component({
   selector: 'app-validation-example',

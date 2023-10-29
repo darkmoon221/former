@@ -17,8 +17,6 @@ import { NumberMode } from '../../model/former.enum';
 })
 export class NumberElementComponent extends BaseElementComponent<NumberElement> implements OnInit {
 
-  protected readonly NumberMode = NumberMode;
-
   get mode() {
     if (this.field && this.field.mode) {
       return this.field.mode;

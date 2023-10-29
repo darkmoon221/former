@@ -4,7 +4,7 @@
  *
  * Please see LICENCE for complete licence text.
  */
-export enum ElementType {
+export const enum ElementType {
   TextElement = 'text',
   TextAreaElement = 'textArea',
   NumberElement = 'number',
@@ -19,24 +19,24 @@ export enum ElementType {
   CardElement = 'card'
 }
 
-export enum NumberMode {
+export const enum NumberMode {
   Decimal = 'decimal',
   Currency = 'currency'
 }
 
-export enum ActionType {
+export const enum ActionType {
   Button = 'button',
   Submit = 'submit',
   CancelButton = 'cancel-button'
 }
 
-export enum Align {
+export const enum Align {
   left = 'left',
   right = 'right',
   center = 'center'
 }
 
-export enum ValidationType {
+export const enum ValidationType {
   Min = 'min',
   Max = 'max',
   Required = 'required',

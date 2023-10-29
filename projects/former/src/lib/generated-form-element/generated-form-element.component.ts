@@ -17,7 +17,18 @@ import {Element} from '../model/former.model';
 })
 export class GeneratedFormElementComponent {
 
-  protected readonly ElementType = ElementType;
+  protected readonly TextElement = ElementType.TextElement;
+  protected readonly TextAreaElement = ElementType.TextAreaElement;
+  protected readonly NumberElement = ElementType.NumberElement;
+  protected readonly GroupElement = ElementType.GroupElement;
+  protected readonly CalendarElement = ElementType.CalendarElement;
+  protected readonly DropdownElement = ElementType.DropdownElement;
+  protected readonly InputGroupElement = ElementType.InputGroupElement;
+  protected readonly  GridLayoutElement = ElementType.GridLayoutElement;
+  protected readonly GridColumnElement = ElementType.GridColumnElement;
+  protected readonly AutocompleteElement = ElementType.AutocompleteElement;
+  protected readonly CheckboxElement = ElementType.CheckboxElement;
+  protected readonly CardElement = ElementType.CardElement;
 
   @Input() parentKey = '';
   @Input() element!: KeyValue<string, Element>;
