@@ -30,6 +30,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run build-lib-prod
       - run: npm publish
         working-directory: ./dist/former
         env:
