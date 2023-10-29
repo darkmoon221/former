@@ -22,18 +22,20 @@ import {KeyFilterModule} from 'primeng/keyfilter';
 import {MessageModule} from 'primeng/message';
 import {CalendarElementComponent} from './elements/calendar-element/calendar-element.component';
 import {DropdownElementComponent} from './elements/dropdown-element/dropdown-element.component';
-import {GridLayoutElementComponent} from './elements/grid-layout-element/grid-layout-element.component';
-import {GroupElementComponent} from './elements/group-element/group-element.component';
 import {InputGroupElementComponent} from './elements/input-group-element/input-group-element.component';
 import {TextElementComponent} from './elements/text-element/text-element.component';
-import {GeneratedFormElementComponent} from './generated-form-element/generated-form-element.component';
+import {
+  CardElementComponent,
+  GeneratedFormElementComponent,
+  GridColumnElementComponent,
+  GridLayoutElementComponent,
+  GroupElementComponent
+} from './generated-form-element/generated-form-element.component';
 import {GeneratedFormComponent} from './generated-form/generated-form.component';
-import { GridColumnElementComponent } from './elements/grid-column-element/grid-column-element.component';
 import { AutocompleteElementComponent } from './elements/autocomplete-element/autocomplete-element.component';
 import { CheckboxElementComponent } from './elements/checkbox-element/checkbox-element.component';
 import { GeneratedFormActionsComponent } from './generated-form-actions/generated-form-actions.component';
 import { ValidationErrorComponent } from './elements/validation-error/validation-error.component';
-import { CardElementComponent } from './elements/card-element/card-element.component';
 import { NumberElementComponent } from './elements/number-element/number-element.component';
 import { TextAreaElementComponent } from './elements/text-area-element/text-area-element.component';
 

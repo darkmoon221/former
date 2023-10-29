@@ -10,19 +10,3 @@ import {FormGroup} from '@angular/forms';
 import {GroupElement} from '../../model/former.model';
 import {BaseElementComponent} from '../base-element.component';
 
-@Component({
-  selector: 'lib-group-element',
-  templateUrl: './group-element.component.html',
-  styleUrls: ['./group-element.component.css']
-})
-export class GroupElementComponent extends BaseElementComponent<GroupElement> {
-
-  originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
-    return 0;
-  }
-
-  get childGroup() {
-    return this.formGroup.get(this.key) as FormGroup
-  }
-
-}

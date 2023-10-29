@@ -8,7 +8,8 @@ import {KeyValue} from '@angular/common';
 import {Component, Input} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {ElementType} from '../model/former.enum';
-import {Element} from '../model/former.model';
+import {CardElement, Element, GridColumnElement, GridLayoutElement, GroupElement, LayoutElement} from '../model/former.model';
+import {BaseElementComponent} from "../elements/base-element.component";
 
 @Component({
   selector: '[lib-generated-form-element]',
@@ -38,5 +39,66 @@ export class GeneratedFormElementComponent {
   get anyElement(): any {
     return this.element as any;
   }
+
+}
+
+@Component({
+  selector: '[lib-grid-layout-element]',
+  templateUrl: '../elements/grid-layout-element/grid-layout-element.component.html',
+  styleUrls: ['../elements/grid-layout-element/grid-layout-element.component.css'],
+})
+export class GridLayoutElementComponent extends BaseElementComponent<GridLayoutElement> {
+
+  getElementClass(element: any) {
+    if ((element.value as any).type === ElementType.GridColumnElement) {
+      return (element.value as any as LayoutElement).class + ' col-no-padding';
+    } else {
+      return '';
+    }
+  }
+
+  originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
+    return 0;
+  };
+}
+
+@Component({
+  selector: '[lib-grid-column-element]',
+  templateUrl: '../elements/grid-column-element/grid-column-element.component.html',
+  styleUrls: ['../elements/grid-column-element/grid-column-element.component.css']
+})
+export class GridColumnElementComponent extends BaseElementComponent<GridColumnElement>{
+  originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
+    return 0;
+  }
+}
+
+@Component({
+  selector: 'lib-group-element',
+  templateUrl: '../elements/group-element/group-element.component.html',
+  styleUrls: ['../elements/group-element/group-element.component.css']
+})
+export class GroupElementComponent extends BaseElementComponent<GroupElement> {
+
+  originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
+    return 0;
+  }
+
+  get childGroup() {
+    return this.formGroup.get(this.key) as FormGroup
+  }
+
+}
+
+@Component({
+  selector: 'lib-card-element',
+  templateUrl: '../elements/card-element/card-element.component.html',
+  styleUrls: ['../elements/card-element/card-element.component.css']
+})
+export class CardElementComponent extends BaseElementComponent<CardElement> {
+
+  originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
+    return 0;
+  };
 
 }
