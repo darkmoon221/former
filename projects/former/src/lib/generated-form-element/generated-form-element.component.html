@@ -6,6 +6,7 @@
   -->
 <div [ngSwitch]="element.value.type">
   <lib-text-element *ngSwitchCase="TextElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-element>
+  <lib-display-text-element *ngSwitchCase="DisplayTextElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-display-text-element>
   <lib-text-area-element *ngSwitchCase="TextAreaElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-area-element>
   <lib-number-element *ngSwitchCase="NumberElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-number-element>
   <lib-group-element *ngSwitchCase="GroupElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-group-element>

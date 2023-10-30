@@ -5,7 +5,7 @@
  * Please see LICENCE for complete licence text.
  */
 import {AfterContentChecked, ChangeDetectorRef, Component, inject} from '@angular/core';
-import {ElementType, FormDefinition } from 'former';
+import {ElementType, FormDefinition} from 'former';
 import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
 import {of} from 'rxjs';
 
@@ -18,7 +18,9 @@ export class AllElementsExampleComponent implements AfterContentChecked {
 
   readonly cdr = inject(ChangeDetectorRef);
 
-  formValues: any;
+  formValues: any = {
+    displayText: 'Test text to display'
+  };
 
   basicSuggestions$ = of([
       'Deutschland',
@@ -39,9 +41,9 @@ export class AllElementsExampleComponent implements AfterContentChecked {
 
   // Custom autoCompleteFilter
   countryFilter = (event: AutoCompleteCompleteEvent, data: any[]) => {
-    console.log("Custom filter", event.query, data.filter(d => d.toLowerCase().startsWith(event.query.toLowerCase())))
+    console.log('Custom filter', event.query, data.filter(d => d.toLowerCase().startsWith(event.query.toLowerCase())));
     return data.filter(d => d.toLowerCase().startsWith(event.query.toLowerCase()));
-  }
+  };
 
   formDefinition: FormDefinition = {
     title: 'All elements example',
@@ -103,7 +105,12 @@ export class AllElementsExampleComponent implements AfterContentChecked {
         type: ElementType.CardElement,
         title: 'Card',
         cssClass: 'mt-4',
-        elements: {}
+        elements: {
+          displayText: {
+            type: ElementType.DisplayTextElement,
+            title: 'DisplayText'
+          }
+        }
       }
     },
     actions: {}
@@ -117,4 +124,5 @@ export class AllElementsExampleComponent implements AfterContentChecked {
   ngAfterContentChecked(): void {
     this.cdr.detectChanges();
   }
+
 }

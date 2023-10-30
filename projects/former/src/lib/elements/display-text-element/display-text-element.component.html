@@ -1,0 +1,14 @@
+<!--
+  ~ Apache-2.0 Licence
+  ~ Copyright (c) 2023 Tobias Kronschnabl
+  ~
+  ~ Please see LICENCE for complete licence text.
+  -->
+<div [formGroup]="formGroup">
+  <div>
+    <span class="flex flex-column gap-1">
+      <label class="underline font-medium" [for]="key">{{element.value.title}}</label>
+      <span [id]="key">{{control.value}}</span>
+    </span>
+  </div>
+</div>

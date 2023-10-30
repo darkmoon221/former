@@ -19,6 +19,7 @@ import {BaseElementComponent} from "../elements/base-element.component";
 export class GeneratedFormElementComponent {
 
   protected readonly TextElement = ElementType.TextElement;
+  protected readonly DisplayTextElement = ElementType.DisplayTextElement;
   protected readonly TextAreaElement = ElementType.TextAreaElement;
   protected readonly NumberElement = ElementType.NumberElement;
   protected readonly GroupElement = ElementType.GroupElement;

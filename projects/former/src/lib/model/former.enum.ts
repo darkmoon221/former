@@ -6,6 +6,7 @@
  */
 export const enum ElementType {
   TextElement = 'text',
+  DisplayTextElement = 'display-text',
   TextAreaElement = 'textArea',
   NumberElement = 'number',
   GroupElement = 'group',

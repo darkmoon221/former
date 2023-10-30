@@ -38,6 +38,7 @@ import { GeneratedFormActionsComponent } from './generated-form-actions/generate
 import { ValidationErrorComponent } from './elements/validation-error/validation-error.component';
 import { NumberElementComponent } from './elements/number-element/number-element.component';
 import { TextAreaElementComponent } from './elements/text-area-element/text-area-element.component';
+import { DisplayTextElementComponent } from './elements/display-text-element/display-text-element.component';
 
 const primeng = [
   CardModule,
@@ -70,7 +71,8 @@ const primeng = [
     ValidationErrorComponent,
     CardElementComponent,
     NumberElementComponent,
-    TextAreaElementComponent
+    TextAreaElementComponent,
+    DisplayTextElementComponent
   ],
   imports: [
     CommonModule,

@@ -15,7 +15,7 @@ export interface FormDefinition {
   actions: Actions
 }
 
-export type Element = TextElement | TextAreaElement | NumberElement | GroupElement | CalendarElement | DropdownElement | InputGroupElement | AutoCompleteElement | CheckboxElement | CardElement | GridLayoutElement | GridColumnElement
+export type Element = TextElement | DisplayTextElement | TextAreaElement | NumberElement | GroupElement | CalendarElement | DropdownElement | InputGroupElement | AutoCompleteElement | CheckboxElement | CardElement | GridLayoutElement | GridColumnElement
 export type Elements = { [key: string]: Element }
 
 export type LayoutElements = { [key: string]: GridColumnElement }
@@ -38,6 +38,10 @@ export interface UnitElement {
 
 export interface TextElement extends BaseElement, DisableElement {
   type: ElementType.TextElement;
+}
+
+export interface DisplayTextElement extends BaseElement, DisableElement {
+  type: ElementType.DisplayTextElement;
 }
 
 export interface TextAreaElement extends BaseElement, DisableElement {
