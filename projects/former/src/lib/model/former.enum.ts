@@ -17,7 +17,8 @@ export const enum ElementType {
   GridColumnElement = 'gridColumn',
   AutocompleteElement = 'autocomplete',
   CheckboxElement = 'checkbox',
-  CardElement = 'card'
+  CardElement = 'card',
+  TemplateElement = 'template'
 }
 
 export const enum NumberMode {

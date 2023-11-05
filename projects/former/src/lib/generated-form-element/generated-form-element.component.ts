@@ -5,7 +5,7 @@
  * Please see LICENCE for complete licence text.
  */
 import {KeyValue} from '@angular/common';
-import {Component, Input} from '@angular/core';
+import {Component, Input, QueryList} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {ElementType} from '../model/former.enum';
 import {CardElement, Element, GridColumnElement, GridLayoutElement, GroupElement, LayoutElement} from '../model/former.model';
@@ -31,11 +31,14 @@ export class GeneratedFormElementComponent {
   protected readonly AutocompleteElement = ElementType.AutocompleteElement;
   protected readonly CheckboxElement = ElementType.CheckboxElement;
   protected readonly CardElement = ElementType.CardElement;
+  protected readonly TemplateElement = ElementType.TemplateElement;
 
   @Input() parentKey = '';
   @Input() element!: KeyValue<string, Element>;
   @Input() formGroup!: FormGroup;
   @Input() class!: string;
+
+  @Input() templates?: QueryList<any>
 
   get anyElement(): any {
     return this.element as any;

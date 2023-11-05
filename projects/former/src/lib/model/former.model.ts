@@ -15,7 +15,21 @@ export interface FormDefinition {
   actions: Actions
 }
 
-export type Element = TextElement | DisplayTextElement | TextAreaElement | NumberElement | GroupElement | CalendarElement | DropdownElement | InputGroupElement | AutoCompleteElement | CheckboxElement | CardElement | GridLayoutElement | GridColumnElement
+export type Element = TextElement |
+  DisplayTextElement |
+  TextAreaElement |
+  NumberElement |
+  GroupElement |
+  CalendarElement |
+  DropdownElement |
+  InputGroupElement |
+  AutoCompleteElement |
+  CheckboxElement |
+  CardElement |
+  GridLayoutElement |
+  GridColumnElement |
+  TemplateElement
+
 export type Elements = { [key: string]: Element }
 
 export type LayoutElements = { [key: string]: GridColumnElement }
@@ -94,6 +108,11 @@ export interface CheckboxElement extends BaseElement, DisableElement {
 export interface CardElement extends BaseElement {
   type: ElementType.CardElement,
   elements: Elements
+}
+
+export interface TemplateElement extends BaseElement {
+  type: ElementType.TemplateElement,
+  templateId: string
 }
 
 // region Layout Elements

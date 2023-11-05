@@ -38,6 +38,8 @@ export class FormerService {
         case ElementType.CardElement:
           this.addControlRecursive(formGroup, element.elements);
           break;
+        case ElementType.TemplateElement:
+          break;
         default:
           formGroup.addControl(key, new FormControl(undefined, this.addValidators(element)));
       }

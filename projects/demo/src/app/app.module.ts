@@ -19,6 +19,8 @@ import {AppComponent} from './app.component';
 import {LayoutExampleComponent} from './layout-example/layout-example.component';
 import {ValidationExampleComponent} from './validation-example/validation-example.component';
 import { ActionExampleComponent } from './action-example/action-example.component';
+import { TestComponentComponent } from './test-component/test-component.component';
+import { TemplateExampleComponent } from './template-example/template-example.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: 'actions',
     component: ActionExampleComponent
+  },
+  {
+    path: 'templates',
+    component: TemplateExampleComponent
   }
 ];
 
@@ -50,6 +56,8 @@ const appRoutes: Routes = [
     AllElementsExampleComponent,
     LayoutExampleComponent,
     ActionExampleComponent,
+    TestComponentComponent,
+    TemplateExampleComponent,
   ],
   imports: [
     BrowserModule,

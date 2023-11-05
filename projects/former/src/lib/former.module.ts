@@ -39,6 +39,8 @@ import { ValidationErrorComponent } from './elements/validation-error/validation
 import { NumberElementComponent } from './elements/number-element/number-element.component';
 import { TextAreaElementComponent } from './elements/text-area-element/text-area-element.component';
 import { DisplayTextElementComponent } from './elements/display-text-element/display-text-element.component';
+import { TemplateElementComponent } from './elements/template-element/template-element.component';
+import { TemplateNameDirective } from './directive/template-name.directive';
 
 const primeng = [
   CardModule,
@@ -72,7 +74,9 @@ const primeng = [
     CardElementComponent,
     NumberElementComponent,
     TextAreaElementComponent,
-    DisplayTextElementComponent
+    DisplayTextElementComponent,
+    TemplateElementComponent,
+    TemplateNameDirective
   ],
   imports: [
     CommonModule,
@@ -84,6 +88,7 @@ const primeng = [
   exports: [
     GeneratedFormComponent,
     GeneratedFormActionsComponent,
+    TemplateNameDirective,
     ...primeng
   ]
 })

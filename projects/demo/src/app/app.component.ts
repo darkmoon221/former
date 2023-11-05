@@ -36,6 +36,10 @@ export class AppComponent {
     {
       label: 'Actions example',
       routerLink: 'actions'
+    },
+    {
+      label: 'Template example',
+      routerLink: 'templates'
     }
   ];
 

@@ -5,8 +5,9 @@
  * Please see LICENCE for complete licence text.
  */
 import {KeyValue} from '@angular/common';
-import {AfterContentChecked, ChangeDetectorRef, Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {AfterContentChecked, ChangeDetectorRef, Component, ContentChildren, ElementRef, EventEmitter, inject, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges, TemplateRef, ViewChild, ViewChildren} from '@angular/core';
 import {FormGroup} from '@angular/forms';
+import {TemplateNameDirective} from '../directive/template-name.directive';
 import {FormerService} from '../former.service';
 import {ActionType} from '../model/former.enum';
 import {ActionButton, ActionResult, FormDefinition} from '../model/former.model';
@@ -20,6 +21,8 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
 
   readonly formerService = inject(FormerService);
   readonly cdr = inject(ChangeDetectorRef);
+
+  @ContentChildren(TemplateNameDirective) templates!: QueryList<TemplateNameDirective>
 
   @Input() formDefinition!: FormDefinition;
 
