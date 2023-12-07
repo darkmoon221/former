@@ -81,7 +81,6 @@ const primeng = [
   imports: [
     CommonModule,
     TranslateModule,
-    BrowserAnimationsModule,
     ReactiveFormsModule,
     ...primeng
   ],
