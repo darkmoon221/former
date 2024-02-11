@@ -11,7 +11,8 @@
       [options]="element.value.options | async"
       [placeholder]="key"
       [showClear]="true"
-      optionLabel="name"
+      optionLabel="{{element.value.optionLabel || 'name'}}"
+      optionValue="{{element.value.optionValue || 'code'}}"
       [styleClass]="'p-inputtext-sm w-full'"
     >
     </p-dropdown>

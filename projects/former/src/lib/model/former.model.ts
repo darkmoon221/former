@@ -91,6 +91,8 @@ export interface CalendarElement extends BaseElement, DisableElement {
 export interface DropdownElement extends BaseElement, DisableElement {
   type: ElementType.DropdownElement;
   options: Observable<any>;
+  optionLabel?: string;
+  optionValue?: string;
 }
 
 export interface AutoCompleteElement extends BaseElement, DisableElement {

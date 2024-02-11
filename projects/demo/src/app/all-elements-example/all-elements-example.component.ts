@@ -19,7 +19,8 @@ export class AllElementsExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);
 
   formValues: any = {
-    displayText: 'Test text to display'
+    displayText: 'Test text to display',
+    dropdownWithId: 'en'
   };
 
   basicSuggestions$ = of([
@@ -35,8 +36,8 @@ export class AllElementsExampleComponent implements AfterContentChecked {
   );
 
   dropdownOptions$ = of([
-    {code: 'de', name: 'DE'},
-    {code: 'en', name: 'EN'}
+    {code: 'de', name: 'DE', additional: 'de'},
+    {code: 'en', name: 'EN', additional: 'en'}
   ]);
 
   // Custom autoCompleteFilter
@@ -74,6 +75,13 @@ export class AllElementsExampleComponent implements AfterContentChecked {
         type: ElementType.DropdownElement,
         title: 'Dropdown',
         options: this.dropdownOptions$
+      },
+      dropdownWithId: {
+        type: ElementType.DropdownElement,
+        title: 'Dropdown with ID',
+        options: this.dropdownOptions$,
+        optionLabel: 'name',
+        optionValue: 'additional'
       },
       inputGroup: {
         type: ElementType.InputGroupElement,
