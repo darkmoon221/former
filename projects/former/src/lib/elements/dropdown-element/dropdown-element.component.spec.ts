@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
 import {of} from 'rxjs';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
 
 import {DropdownElementComponent} from './dropdown-element.component';

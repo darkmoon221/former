@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {FormGroup} from '@angular/forms';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
+import {GridColumnElementComponent} from "../../generated-form-element/generated-form-element.component";
 
-import { GridColumnElementComponent } from './grid-column-element.component';
 
 describe('GridColumnElementComponent', () => {
   let component: GridColumnElementComponent;

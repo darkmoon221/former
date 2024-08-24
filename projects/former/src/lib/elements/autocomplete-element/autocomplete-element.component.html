@@ -6,7 +6,14 @@
   -->
 <div [formGroup]="formGroup" >
   <span class="p-float-label mt-4">
-    <p-autoComplete [formControlName]="key" [suggestions]="filteredSuggestions"  [field]="field.field" (completeMethod)="filter($event)" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"></p-autoComplete>
+    <p-autoComplete #autoCompleteElement
+      [formControlName]="key"
+      [suggestions]="filteredSuggestions"
+      [optionLabel]="field.field"
+      (completeMethod)="filter($event)"
+      [style]="{'width':field.width ?? '100%'}"
+      [inputStyle]="{'width':'100%'}"
+    ></p-autoComplete>
     <label [for]="key">{{element.value.title}}</label>
   </span>
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>

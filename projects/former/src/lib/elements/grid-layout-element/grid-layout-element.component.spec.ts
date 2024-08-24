@@ -1,9 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormGroup} from '@angular/forms';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
+import {GridLayoutElementComponent} from "../../generated-form-element/generated-form-element.component";
 
-import {GridLayoutElementComponent} from './grid-layout-element.component';
 
 describe('GridRowElementComponent', () => {
   let component: GridLayoutElementComponent;

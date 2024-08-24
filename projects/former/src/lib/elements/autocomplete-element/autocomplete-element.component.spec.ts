@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
 import {of} from 'rxjs';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
 
 import { AutocompleteElementComponent } from './autocomplete-element.component';
@@ -32,7 +32,7 @@ describe('AutocompleteElementComponent', () => {
       key: 'autocomplete',
       value: {
         type: ElementType.AutocompleteElement,
-        title: 'Auocomplete',
+        title: 'Autocomplete',
         suggestions: suggestions$,
         field: 'name'
       }

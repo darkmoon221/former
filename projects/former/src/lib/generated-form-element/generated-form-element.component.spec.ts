@@ -2,10 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
 import {TextElementComponent} from '../elements/text-element/text-element.component';
 import {FormerService} from '../former.service';
-import {ElementType} from '../model/former.model';
 import {TestingModule} from '../testing/testing.module';
 
 import {GeneratedFormElementComponent} from './generated-form-element.component';
+import {ElementType} from "../model/former.enum";
 
 describe('GeneratedFormElementComponent', () => {
   let component: GeneratedFormElementComponent;
