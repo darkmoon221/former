@@ -8,6 +8,7 @@ import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
 import {KeyFilterPattern} from 'primeng/keyfilter';
 import {Observable} from 'rxjs';
 import {ActionType, Align, ElementType, NumberMode, ValidationType} from './former.enum';
+import {ScrollerOptions} from "primeng/api";
 
 export interface FormDefinition {
   title?: string,
@@ -100,6 +101,27 @@ export interface AutoCompleteElement extends BaseElement, DisableElement {
   suggestions: Observable<any>;
   field?: string;
   filter?: (event: AutoCompleteCompleteEvent, data: any[]) => any[];
+  width?: string;
+  options?: AutoCompleteOptions
+}
+
+export interface AutoCompleteOptions {
+  minLength?: number;
+  delay?: number;
+  style?: { [klass: string]: any } | null | undefined;
+  panelStyle?: { [klass: string]: any } | null | undefined;
+  styleClass?: string | undefined;
+  panelStyleClass?: string | undefined;
+  inputStyle?: { [klass: string]: any } | null | undefined;
+  inputId?: string | undefined;
+  inputStyleClass?: string | undefined;
+  placeholder?: string | undefined;
+  readonly?: boolean | undefined;
+  disabled?: boolean | undefined;
+  scrollHeight?: string;
+  lazy?: boolean;
+  virtualScroll?: ScrollerOptions | undefined;
+  maxLength?: number | undefined;
 }
 
 export interface CheckboxElement extends BaseElement, DisableElement {

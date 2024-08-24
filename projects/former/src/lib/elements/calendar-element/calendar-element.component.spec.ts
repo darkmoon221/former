@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
 
 import { CalendarElementComponent } from './calendar-element.component';

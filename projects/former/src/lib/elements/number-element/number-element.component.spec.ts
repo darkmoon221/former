@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ElementType} from '../../model/former.model';
 import {TestingModule} from '../../testing/testing.module';
 
 import { NumberElementComponent } from './number-element.component';
+import {ElementType} from "../../model/former.enum";
 
 describe('NumberElementComponent', () => {
   let component: NumberElementComponent;

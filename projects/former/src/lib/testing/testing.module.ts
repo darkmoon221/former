@@ -20,6 +20,7 @@ import {KeyFilterModule} from 'primeng/keyfilter';
 import {MessageModule} from 'primeng/message';
 import {ValidationErrorComponent} from '../elements/validation-error/validation-error.component';
 import {FormerService} from '../former.service';
+import {TemplateNameDirective} from "../directive/template-name.directive";
 
 
 const primeng = [

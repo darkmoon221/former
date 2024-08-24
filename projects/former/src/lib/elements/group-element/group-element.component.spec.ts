@@ -1,9 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormControl, FormGroup} from '@angular/forms';
-import {ElementType} from '../../model/former.model';
+import {ElementType} from '../../model/former.enum';
 import {TestingModule} from '../../testing/testing.module';
+import {GroupElementComponent} from "../../generated-form-element/generated-form-element.component";
 
-import {GroupElementComponent} from './group-element.component';
 
 describe('GroupElementComponent', () => {
   let component: GroupElementComponent;
