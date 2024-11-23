@@ -1,6 +1,6 @@
 {
   "name": "former",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "license": "Apache-2.0",
   "author": "Tobias Kronschnabl",
   "email": "dev.kronschnabl@gmail.com",
@@ -11,7 +11,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-lib-prod": "ng build former",
-    "build-lib": "ng build former --watch"
+    "build-lib": "ng build former --watch",
+    "release": "standard-version"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
+    "standard-version": "^9.5.0",
     "typescript": "~5.4.5"
   }
 }
