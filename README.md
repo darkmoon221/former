@@ -21,5 +21,15 @@ npm run build-lib
 npm run start
 ```
 
+## Commits
+
+Each commit should follow the rules for [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Releasing 
+
+This project is using [standard-version](https://github.com/conventional-changelog/standard-version) for versioning.
+
+* Regular release: run `npm release`
+* Pre-Release: run `npm release -- --prerelease`
 
 
