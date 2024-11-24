@@ -5,11 +5,24 @@
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
+      "packageNames": [
+        "@angular/animations",
+        "@angular/common",
+        "@angular/core",
+        "@angular/cli",
+        "@angular/compiler",
+        "@angular/compiler-cli",
+        "@angular/forms",
+        "@angular/platform-browser",
+        "@angular/platform-browser-dynamic",
+        "@angular/router",
+        "@angular/material",
+        "@angular/cdk",
+        "@angular-devkit/build-angular"
       ],
-      "groupSlug": "non-major"
+      "versioning": "angular",
+      "rangeStrategy": "increase",
+      "allowedVersions": "17.x.x || 18.x.x"
     }
   ],
   "prHourlyLimit": 0,
