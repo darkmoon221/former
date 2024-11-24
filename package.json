@@ -12,7 +12,8 @@
     "test": "ng test",
     "build-lib-prod": "ng build former",
     "build-lib": "ng build former --watch",
-    "release": "standard-version"
+    "release": "commit-and-tag-version",
+    "release-dry-run": "commit-and-tag-version --dry-run"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +45,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
-    "standard-version": "^9.5.0",
+    "commit-and-tag-version": "^12.5.0",
     "typescript": "~5.4.5"
   }
 }
