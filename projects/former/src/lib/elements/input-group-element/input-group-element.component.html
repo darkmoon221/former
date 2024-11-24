@@ -7,7 +7,7 @@
 <div [formGroup]="formGroup">
   <div class="p-inputgroup mt-4">
     <!--    <span class="p-float-label mt-4">-->
-    <span *ngIf="field.icon" class="p-inputgroup-addon ">$</span>
+    <span *ngIf="field.icon" class="p-inputgroup-addon">$</span>
     <input
       pInputText
       [id]="key"
@@ -15,11 +15,13 @@
       [class]="'p-inputtext-sm w-full'"
       [formControlName]="key"
       [placeholder]="field.title"
-      [pKeyFilter]="field.keyFilter"
-    />
+      [pKeyFilter]="field.keyFilter" />
     <!--      <label [for]="key">{{element.value.title}}</label>-->
-    <span *ngIf="field.unit" class="p-inputgroup-addon">{{field.unit}}</span>
+    <span *ngIf="field.unit" class="p-inputgroup-addon">{{ field.unit }}</span>
     <!--    </span>-->
   </div>
-  <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+  <lib-validation-error
+    [control]="control"
+    [key]="key"
+    [field]="field"></lib-validation-error>
 </div>

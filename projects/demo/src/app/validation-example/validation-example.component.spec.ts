@@ -8,7 +8,7 @@ describe('ValidationExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ValidationExampleComponent]
+      declarations: [ValidationExampleComponent],
     });
     fixture = TestBed.createComponent(ValidationExampleComponent);
     component = fixture.componentInstance;

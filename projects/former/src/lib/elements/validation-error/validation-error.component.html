@@ -6,6 +6,11 @@
   -->
 <div *ngIf="control?.invalid">
   <div *ngFor="let validator of field?.validators">
-    <small *ngIf="control?.hasError(validator.validationType)" [id]="key + '-message'" class="p-error">{{validator.messageKey | translate: validator.messageArgs}}</small>
+    <small
+      *ngIf="control?.hasError(validator.validationType)"
+      [id]="key + '-message'"
+      class="p-error"
+      >{{ validator.messageKey | translate: validator.messageArgs }}</small
+    >
   </div>
 </div>

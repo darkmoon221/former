@@ -5,14 +5,12 @@
  * Please see LICENCE for complete licence text.
  */
 import { Component } from '@angular/core';
-import {CheckboxElement} from '../../model/former.model';
-import {BaseElementComponent} from '../base-element.component';
+import { CheckboxElement } from '../../model/former.model';
+import { BaseElementComponent } from '../base-element.component';
 
 @Component({
   selector: 'lib-checkbox-element',
   templateUrl: './checkbox-element.component.html',
-  styleUrls: ['./checkbox-element.component.css']
+  styleUrls: ['./checkbox-element.component.css'],
 })
-export class CheckboxElementComponent extends BaseElementComponent<CheckboxElement>{
-
-}
+export class CheckboxElementComponent extends BaseElementComponent<CheckboxElement> {}

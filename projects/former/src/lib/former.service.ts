@@ -4,16 +4,31 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {inject, Injectable} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
-import {ElementType, ValidationType} from './model/former.enum';
-import {BaseElement, Element, Elements, FormDefinition, MaxFormValidator, MaxLengthFormValidator, MinFormValidator, MinLengthFormValidator, PatternFormValidator} from './model/former.model';
+import { inject, Injectable } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  ValidatorFn,
+  Validators,
+} from '@angular/forms';
+import { ElementType, ValidationType } from './model/former.enum';
+import {
+  BaseElement,
+  Element,
+  Elements,
+  FormDefinition,
+  MaxFormValidator,
+  MaxLengthFormValidator,
+  MinFormValidator,
+  MinLengthFormValidator,
+  PatternFormValidator,
+} from './model/former.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FormerService {
-
   readonly fb = inject(FormBuilder);
 
   generateForm(formDefinition: FormDefinition): FormGroup {
@@ -41,7 +56,10 @@ export class FormerService {
         case ElementType.TemplateElement:
           break;
         default:
-          formGroup.addControl(key, new FormControl(undefined, this.addValidators(element)));
+          formGroup.addControl(
+            key,
+            new FormControl(undefined, this.addValidators(element))
+          );
       }
     }
   }
@@ -53,10 +71,14 @@ export class FormerService {
       for (let validator of element.validators) {
         switch (validator.validationType) {
           case ValidationType.Min:
-            validators.push(Validators.max((validator as MinFormValidator).min))
+            validators.push(
+              Validators.max((validator as MinFormValidator).min)
+            );
             break;
           case ValidationType.Max:
-            validators.push(Validators.max((validator as MaxFormValidator).max))
+            validators.push(
+              Validators.max((validator as MaxFormValidator).max)
+            );
             break;
           case ValidationType.Required:
             validators.push(Validators.required);
@@ -65,13 +87,23 @@ export class FormerService {
             validators.push(Validators.email);
             break;
           case ValidationType.MinLength:
-            validators.push(Validators.minLength((validator as MinLengthFormValidator).minLength));
+            validators.push(
+              Validators.minLength(
+                (validator as MinLengthFormValidator).minLength
+              )
+            );
             break;
           case ValidationType.MaxLength:
-            validators.push(Validators.maxLength((validator as MaxLengthFormValidator).maxLength));
+            validators.push(
+              Validators.maxLength(
+                (validator as MaxLengthFormValidator).maxLength
+              )
+            );
             break;
           case ValidationType.Pattern:
-            validators.push(Validators.pattern((validator as PatternFormValidator).pattern));
+            validators.push(
+              Validators.pattern((validator as PatternFormValidator).pattern)
+            );
             break;
           default:
             break;
@@ -81,5 +113,4 @@ export class FormerService {
 
     return validators;
   }
-
 }

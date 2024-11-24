@@ -4,15 +4,14 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {Component, inject} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
-import {MenuItem} from 'primeng/api';
-
+import { Component, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'former demo';
@@ -23,30 +22,28 @@ export class AppComponent {
   items: MenuItem[] = [
     {
       label: 'All elements example',
-      routerLink: 'all'
+      routerLink: 'all',
     },
     {
       label: 'Validation example',
-      routerLink: 'validation'
+      routerLink: 'validation',
     },
     {
       label: 'Layout example',
-      routerLink: 'layout'
+      routerLink: 'layout',
     },
     {
       label: 'Actions example',
-      routerLink: 'actions'
+      routerLink: 'actions',
     },
     {
       label: 'Template example',
-      routerLink: 'templates'
-    }
+      routerLink: 'templates',
+    },
   ];
 
   constructor() {
     this.translateService.setDefaultLang('de');
     this.translateService.use('de');
   }
-
-
 }

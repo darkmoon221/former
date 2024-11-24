@@ -1,12 +1,10 @@
-import {TemplateNameDirective} from './template-name.directive';
-import {Component, ViewChild} from "@angular/core";
-import {NgTemplateOutlet} from "@angular/common";
-import {ComponentFixture, TestBed} from "@angular/core/testing";
+import { TemplateNameDirective } from './template-name.directive';
+import { Component, ViewChild } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 @Component({
-  template: `
-    <ng-template name="one">Hello World</ng-template>
-  `,
+  template: ` <ng-template name="one">Hello World</ng-template> `,
 })
 class WrapperComponent {
   @ViewChild(NgTemplateOutlet) template?: NgTemplateOutlet;

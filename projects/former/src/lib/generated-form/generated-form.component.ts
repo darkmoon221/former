@@ -4,25 +4,48 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {KeyValue} from '@angular/common';
-import {AfterContentChecked, ChangeDetectorRef, Component, ContentChildren, ElementRef, EventEmitter, inject, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges, TemplateRef, ViewChild, ViewChildren} from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import {TemplateNameDirective} from '../directive/template-name.directive';
-import {FormerService} from '../former.service';
-import {ActionType} from '../model/former.enum';
-import {ActionButton, ActionResult, FormDefinition} from '../model/former.model';
+import { KeyValue } from '@angular/common';
+import {
+  AfterContentChecked,
+  ChangeDetectorRef,
+  Component,
+  ContentChildren,
+  ElementRef,
+  EventEmitter,
+  inject,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  QueryList,
+  SimpleChanges,
+  TemplateRef,
+  ViewChild,
+  ViewChildren,
+} from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { TemplateNameDirective } from '../directive/template-name.directive';
+import { FormerService } from '../former.service';
+import { ActionType } from '../model/former.enum';
+import {
+  ActionButton,
+  ActionResult,
+  FormDefinition,
+} from '../model/former.model';
 
 @Component({
   selector: 'lib-generated-form',
   templateUrl: './generated-form.component.html',
-  styleUrls: ['./generated-form.component.css']
+  styleUrls: ['./generated-form.component.css'],
 })
-export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentChecked {
-
+export class GeneratedFormComponent
+  implements OnInit, OnChanges, AfterContentChecked
+{
   readonly formerService = inject(FormerService);
   readonly cdr = inject(ChangeDetectorRef);
 
-  @ContentChildren(TemplateNameDirective) templates!: QueryList<TemplateNameDirective>
+  @ContentChildren(TemplateNameDirective)
+  templates!: QueryList<TemplateNameDirective>;
 
   @Input() formDefinition!: FormDefinition;
 
@@ -45,7 +68,7 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.form && changes['formValues']) {
-      this.form.patchValue(this.formValues, {emitEvent: false});
+      this.form.patchValue(this.formValues, { emitEvent: false });
     }
   }
 
@@ -58,14 +81,16 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
     return 0;
   };
 
-
   setActionHandler(action: ActionButton) {
     this.actionHandler = action;
   }
 
   callActionHandler() {
     if (this.actionHandler) {
-      this.onSubmit.emit({action: this.actionHandler, payload: this.form.value});
+      this.onSubmit.emit({
+        action: this.actionHandler,
+        payload: this.form.value,
+      });
     }
   }
 
@@ -73,12 +98,16 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
     return action.value.disabled;
   }
 
-  findActionForKey(action: KeyValue<string, ActionButton>): ActionButton | undefined {
+  findActionForKey(
+    action: KeyValue<string, ActionButton>
+  ): ActionButton | undefined {
     return this.formDefinition.actions[action.key ?? ''];
   }
 
   findSubmitAction(): ActionButton | undefined {
-    return Object.values(this.formDefinition.actions).find(action => action.type === ActionType.Submit);
+    return Object.values(this.formDefinition.actions).find(
+      action => action.type === ActionType.Submit
+    );
   }
 
   private updateButtonState() {
