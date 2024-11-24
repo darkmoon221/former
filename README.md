@@ -27,9 +27,10 @@ Each commit should follow the rules for [conventional commits](https://www.conve
 
 ## Releasing 
 
-This project is using [standard-version](https://github.com/conventional-changelog/standard-version) for versioning.
+This project is using [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for versioning.
 
 * Regular release: run `npm release`
-* Pre-Release: run `npm release -- --prerelease`
+* Dry-run for testing: run `npm release-dry-run`
+* Pre-release: run `npm pre-release`
 
 
