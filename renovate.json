@@ -18,7 +18,8 @@
         "@angular/router",
         "@angular/material",
         "@angular/cdk",
-        "@angular-devkit/build-angular"
+        "@angular-devkit/build-angular",
+        "ng-packagr"
       ],
       "versioning": "angular",
       "rangeStrategy": "increase",
