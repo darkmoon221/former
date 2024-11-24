@@ -4,7 +4,7 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
@@ -50,38 +50,29 @@ const appRoutes: Routes = [
   }
 ];
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ValidationExampleComponent,
-    AllElementsExampleComponent,
-    LayoutExampleComponent,
-    ActionExampleComponent,
-    TestComponentComponent,
-    TemplateExampleComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    TranslateModule.forRoot(
-      {
-        defaultLanguage: 'de',
-        loader: {
-          provide: TranslateLoader,
-          useFactory: createTranslateLoader,
-          deps: [HttpClient]
-        }
-      }
-    ),
-    RouterModule.forRoot(appRoutes),
-    TabMenuModule,
-    FormerModule,
-    ReactiveFormsModule,
-    RouterOutlet
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ValidationExampleComponent,
+        AllElementsExampleComponent,
+        LayoutExampleComponent,
+        ActionExampleComponent,
+        TestComponentComponent,
+        TemplateExampleComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'de',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        RouterModule.forRoot(appRoutes),
+        TabMenuModule,
+        FormerModule,
+        ReactiveFormsModule,
+        RouterOutlet], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
 }
