@@ -4,19 +4,17 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {KeyValue} from '@angular/common';
-import {Component, Input, OnInit} from '@angular/core';
-import {AbstractControl, FormGroup} from '@angular/forms';
-import {DisableElement} from '../model/former.model';
+import { KeyValue } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { AbstractControl, FormGroup } from '@angular/forms';
+import { DisableElement } from '../model/former.model';
 
 @Component({
-  selector: 'bpf-base-element-component',
-  template: '<div>do not use directly</div>'
+  selector: 'lib-base-element-component',
+  template: '<div>do not use directly</div>',
 })
 export abstract class BaseElementComponent<T extends object> implements OnInit {
-
-
-  @Input() parentKey: string = '';
+  @Input() parentKey = '';
   @Input() element!: KeyValue<string, T>;
   @Input() formGroup!: FormGroup;
 
@@ -28,8 +26,8 @@ export abstract class BaseElementComponent<T extends object> implements OnInit {
     return this.element.value;
   }
 
-  get control(): (AbstractControl) {
-    return this.formGroup.get(this.key) as (AbstractControl);
+  get control(): AbstractControl {
+    return this.formGroup.get(this.key) as AbstractControl;
   }
 
   ngOnInit(): void {
@@ -41,5 +39,4 @@ export abstract class BaseElementComponent<T extends object> implements OnInit {
       }
     }
   }
-
 }

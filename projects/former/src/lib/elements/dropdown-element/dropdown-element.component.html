@@ -11,12 +11,14 @@
       [options]="element.value.options | async"
       [placeholder]="key"
       [showClear]="true"
-      optionLabel="{{element.value.optionLabel || 'name'}}"
-      optionValue="{{element.value.optionValue || 'code'}}"
-      [styleClass]="'p-inputtext-sm w-full'"
-    >
+      optionLabel="{{ element.value.optionLabel || 'name' }}"
+      optionValue="{{ element.value.optionValue || 'code' }}"
+      [styleClass]="'p-inputtext-sm w-full'">
     </p-dropdown>
-    <label [for]="key">{{element.value.title}}</label>
+    <label [for]="key">{{ element.value.title }}</label>
   </span>
-  <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+  <lib-validation-error
+    [control]="control"
+    [key]="key"
+    [field]="field"></lib-validation-error>
 </div>

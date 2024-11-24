@@ -18,24 +18,24 @@ export const enum ElementType {
   AutocompleteElement = 'autocomplete',
   CheckboxElement = 'checkbox',
   CardElement = 'card',
-  TemplateElement = 'template'
+  TemplateElement = 'template',
 }
 
 export const enum NumberMode {
   Decimal = 'decimal',
-  Currency = 'currency'
+  Currency = 'currency',
 }
 
 export const enum ActionType {
   Button = 'button',
   Submit = 'submit',
-  CancelButton = 'cancel-button'
+  CancelButton = 'cancel-button',
 }
 
 export const enum Align {
   left = 'left',
   right = 'right',
-  center = 'center'
+  center = 'center',
 }
 
 export const enum ValidationType {
@@ -45,5 +45,5 @@ export const enum ValidationType {
   Email = 'email',
   MinLength = 'minlength',
   MaxLength = 'maxlength',
-  Pattern = 'pattern'
+  Pattern = 'pattern',
 }

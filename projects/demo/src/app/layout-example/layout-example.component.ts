@@ -4,16 +4,15 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {AfterContentChecked, ChangeDetectorRef, Component, inject} from '@angular/core';
-import {ElementType, Elements, FormDefinition } from 'former';
+import { AfterContentChecked, ChangeDetectorRef, Component, inject } from '@angular/core';
+import { ElementType, Elements, FormDefinition } from 'former';
 
 @Component({
   selector: 'app-layout-example',
   templateUrl: './layout-example.component.html',
-  styleUrls: ['./layout-example.component.scss']
+  styleUrls: ['./layout-example.component.scss'],
 })
-export class LayoutExampleComponent implements AfterContentChecked{
-
+export class LayoutExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);
 
   formValues: any;
@@ -30,8 +29,8 @@ export class LayoutExampleComponent implements AfterContentChecked{
             text_3_2_1: {
               type: ElementType.TextElement,
               title: 'Text 3_2_1',
-            }
-          }
+            },
+          },
         },
         right: {
           type: ElementType.GridColumnElement,
@@ -40,11 +39,11 @@ export class LayoutExampleComponent implements AfterContentChecked{
             text_3_2_2: {
               type: ElementType.TextElement,
               title: 'Text 3_2_2',
-            }
-          }
-        }
-      }
-    }
+            },
+          },
+        },
+      },
+    },
   };
 
   formDefinition: FormDefinition = {
@@ -60,9 +59,9 @@ export class LayoutExampleComponent implements AfterContentChecked{
             elements: {
               text_1_1: {
                 type: ElementType.TextElement,
-                title: 'Text 1_1'
+                title: 'Text 1_1',
               },
-            }
+            },
           },
           col_1_2: {
             type: ElementType.GridColumnElement,
@@ -70,11 +69,11 @@ export class LayoutExampleComponent implements AfterContentChecked{
             elements: {
               text_1_2: {
                 type: ElementType.TextElement,
-                title: 'Text 1_2'
+                title: 'Text 1_2',
               },
-            }
-          }
-        }
+            },
+          },
+        },
       },
       rowTwo: {
         type: ElementType.GridLayoutElement,
@@ -86,11 +85,11 @@ export class LayoutExampleComponent implements AfterContentChecked{
             elements: {
               text_2_1: {
                 type: ElementType.TextElement,
-                title: 'Text 2_1'
+                title: 'Text 2_1',
               },
-            }
-          }
-        }
+            },
+          },
+        },
       },
       rowThree: {
         type: ElementType.GridLayoutElement,
@@ -102,25 +101,24 @@ export class LayoutExampleComponent implements AfterContentChecked{
             elements: {
               text_3_1_1: {
                 type: ElementType.TextElement,
-                title: 'Text 3_1_1'
+                title: 'Text 3_1_1',
               },
               text_3_1_2: {
                 type: ElementType.TextElement,
-                title: 'Text 3_1_2'
+                title: 'Text 3_1_2',
               },
-            }
+            },
           },
           col_3_2: {
             type: ElementType.GridColumnElement,
             class: 'col bg-pink-100',
-            elements: this.nestedGrid
-          }
-        }
-      }
+            elements: this.nestedGrid,
+          },
+        },
+      },
     },
-    actions: {
-    }
-  }
+    actions: {},
+  };
 
   formChanged($event: any) {
     this.formValues = $event;

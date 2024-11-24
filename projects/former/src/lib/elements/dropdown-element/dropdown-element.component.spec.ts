@@ -1,40 +1,40 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {FormControl, FormGroup} from '@angular/forms';
-import {of} from 'rxjs';
-import {ElementType} from '../../model/former.enum';
-import {TestingModule} from '../../testing/testing.module';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormControl, FormGroup } from '@angular/forms';
+import { of } from 'rxjs';
+import { ElementType } from '../../model/former.enum';
+import { TestingModule } from '../../testing/testing.module';
 
-import {DropdownElementComponent} from './dropdown-element.component';
+import { DropdownElementComponent } from './dropdown-element.component';
 
 describe('DropdownElementComponent', () => {
   let component: DropdownElementComponent;
   let fixture: ComponentFixture<DropdownElementComponent>;
 
-  let formGroup = new FormGroup({});
-  formGroup.addControl("dropdown", new FormControl(''))
+  const formGroup = new FormGroup({});
+  formGroup.addControl('dropdown', new FormControl(''));
 
   const dropdownOptions$ = of([
-    {code: 'de', name: 'DE'},
-    {code: 'en', name: 'EN'}
+    { code: 'de', name: 'DE' },
+    { code: 'en', name: 'EN' },
   ]);
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [TestingModule],
-      declarations: [DropdownElementComponent]
+      declarations: [DropdownElementComponent],
     });
     fixture = TestBed.createComponent(DropdownElementComponent);
     component = fixture.componentInstance;
-    component.parentKey = "parentKey";
+    component.parentKey = 'parentKey';
     component.formGroup = formGroup;
     component.element = {
       key: 'dropdown',
       value: {
         type: ElementType.DropdownElement,
-        title: "Dropdown",
-        options: dropdownOptions$
-      }
-    }
+        title: 'Dropdown',
+        options: dropdownOptions$,
+      },
+    };
     fixture.detectChanges();
   });
 

@@ -11,9 +11,11 @@
       [name]="key"
       [formControlName]="key"
       [dateFormat]="element.value.dateFormat"
-      [styleClass]="'p-inputtext-sm w-full'"
-    ></p-calendar>
-     <label [for]="key">{{element.value.title}}</label>
+      [styleClass]="'p-inputtext-sm w-full'"></p-calendar>
+    <label [for]="key">{{ element.value.title }}</label>
   </span>
-  <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+  <lib-validation-error
+    [control]="control"
+    [key]="key"
+    [field]="field"></lib-validation-error>
 </div>

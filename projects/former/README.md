@@ -8,18 +8,15 @@ See demo application for usage
 
 ## Development
 
-* Build the library in watch mode
+- Build the library in watch mode
 
 ```
 cd former
 npm run build-lib
 ```
 
-* Run the demo application
+- Run the demo application
 
 ```
 npm run start
 ```
-
-
-

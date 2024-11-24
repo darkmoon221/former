@@ -4,41 +4,42 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {AutoCompleteCompleteEvent} from 'primeng/autocomplete';
-import {KeyFilterPattern} from 'primeng/keyfilter';
-import {Observable} from 'rxjs';
-import {ActionType, Align, ElementType, NumberMode, ValidationType} from './former.enum';
-import {ScrollerOptions} from "primeng/api";
+import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
+import { KeyFilterPattern } from 'primeng/keyfilter';
+import { Observable } from 'rxjs';
+import { ActionType, Align, ElementType, NumberMode, ValidationType } from './former.enum';
+import { ScrollerOptions } from 'primeng/api';
 
 export interface FormDefinition {
-  title?: string,
-  elements: Elements,
-  actions: Actions
+  title?: string;
+  elements: Elements;
+  actions: Actions;
 }
 
-export type Element = TextElement |
-  DisplayTextElement |
-  TextAreaElement |
-  NumberElement |
-  GroupElement |
-  CalendarElement |
-  DropdownElement |
-  InputGroupElement |
-  AutoCompleteElement |
-  CheckboxElement |
-  CardElement |
-  GridLayoutElement |
-  GridColumnElement |
-  TemplateElement
+export type Element =
+  | TextElement
+  | DisplayTextElement
+  | TextAreaElement
+  | NumberElement
+  | GroupElement
+  | CalendarElement
+  | DropdownElement
+  | InputGroupElement
+  | AutoCompleteElement
+  | CheckboxElement
+  | CardElement
+  | GridLayoutElement
+  | GridColumnElement
+  | TemplateElement;
 
-export type Elements = { [key: string]: Element }
+export type Elements = Record<string, Element>;
 
-export type LayoutElements = { [key: string]: GridColumnElement }
+export type LayoutElements = Record<string, GridColumnElement>;
 
 export interface BaseElement {
-  title?: string,
-  cssClass?: string,
-  validators?: FormValidator[]
+  title?: string;
+  cssClass?: string;
+  validators?: FormValidator[];
 }
 
 export interface DisableElement {
@@ -64,7 +65,6 @@ export interface TextAreaElement extends BaseElement, DisableElement {
   rows: number;
   cols?: number;
 }
-
 
 export interface NumberElement extends BaseElement, DisableElement {
   type: ElementType.NumberElement;
@@ -102,17 +102,17 @@ export interface AutoCompleteElement extends BaseElement, DisableElement {
   field?: string;
   filter?: (event: AutoCompleteCompleteEvent, data: any[]) => any[];
   width?: string;
-  options?: AutoCompleteOptions
+  options?: AutoCompleteOptions;
 }
 
 export interface AutoCompleteOptions {
   minLength?: number;
   delay?: number;
-  style?: { [klass: string]: any } | null | undefined;
-  panelStyle?: { [klass: string]: any } | null | undefined;
+  style?: Record<string, any> | null | undefined;
+  panelStyle?: Record<string, any> | null | undefined;
   styleClass?: string | undefined;
   panelStyleClass?: string | undefined;
-  inputStyle?: { [klass: string]: any } | null | undefined;
+  inputStyle?: Record<string, any> | null | undefined;
   inputId?: string | undefined;
   inputStyleClass?: string | undefined;
   placeholder?: string | undefined;
@@ -125,18 +125,18 @@ export interface AutoCompleteOptions {
 }
 
 export interface CheckboxElement extends BaseElement, DisableElement {
-  type: ElementType.CheckboxElement,
-  value: string
+  type: ElementType.CheckboxElement;
+  value: string;
 }
 
 export interface CardElement extends BaseElement {
-  type: ElementType.CardElement,
-  elements: Elements
+  type: ElementType.CardElement;
+  elements: Elements;
 }
 
 export interface TemplateElement extends BaseElement {
-  type: ElementType.TemplateElement,
-  templateId: string
+  type: ElementType.TemplateElement;
+  templateId: string;
 }
 
 // region Layout Elements
@@ -146,63 +146,60 @@ export interface LayoutElement {
 }
 
 export interface GridLayoutElement extends LayoutElement {
-  type: ElementType.GridLayoutElement,
-  elements: LayoutElements
+  type: ElementType.GridLayoutElement;
+  elements: LayoutElements;
 }
 
 export interface GridColumnElement extends LayoutElement {
-  type: ElementType.GridColumnElement,
-  elements: Elements
+  type: ElementType.GridColumnElement;
+  elements: Elements;
 }
 
 // endregion
 
 // region Buttons
 
-
 export interface AlignableButton {
   align?: Align;
 }
 
 export interface FormButton extends AlignableButton, DisableElement {
-  type: ActionType.Button,
-  label: string
+  type: ActionType.Button;
+  label: string;
 }
 
 export interface SubmitButton extends AlignableButton, DisableElement {
-  type: ActionType.Submit,
-  label: string
+  type: ActionType.Submit;
+  label: string;
 }
 
 export interface CancelButton extends AlignableButton, DisableElement {
-  type: ActionType.CancelButton,
-  label: string
+  type: ActionType.CancelButton;
+  label: string;
 }
 
 export type ActionButton = FormButton | SubmitButton | CancelButton;
 
-export type Actions = { [key: string]: (ActionButton) };
+export type Actions = Record<string, ActionButton>;
 
 export interface ActionResult {
-  action: ActionButton,
-  payload: any
+  action: ActionButton;
+  payload: any;
 }
 
 // endregion
 
 // region Validation
 
-export type FormValidator = RequiredFormValidator | MinLengthFormValidator | MaxLengthFormValidator | MinFormValidator | MaxFormValidator | PatternFormValidator | EmailFormValidator
+export type FormValidator = RequiredFormValidator | MinLengthFormValidator | MaxLengthFormValidator | MinFormValidator | MaxFormValidator | PatternFormValidator | EmailFormValidator;
 
 export interface BaseFormValidator {
-  validationType: ValidationType,
-  messageKey: string
-  messageArgs?: any
+  validationType: ValidationType;
+  messageKey: string;
+  messageArgs?: any;
 }
 
-export interface RequiredFormValidator extends BaseFormValidator {
-
-}
+export type RequiredFormValidator = BaseFormValidator;
 
 export interface MinLengthFormValidator extends BaseFormValidator {
   minLength: number;
@@ -224,8 +221,6 @@ export interface PatternFormValidator extends BaseFormValidator {
   pattern: RegExp | string;
 }
 
-export interface EmailFormValidator extends BaseFormValidator {
-}
-
+export type EmailFormValidator = BaseFormValidator;
 
 // endregion

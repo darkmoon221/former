@@ -13,7 +13,9 @@
     "build-lib-prod": "ng build former",
     "build-lib": "ng build former --watch",
     "release": "commit-and-tag-version",
-    "release-dry-run": "commit-and-tag-version --dry-run"
+    "release-dry-run": "commit-and-tag-version --dry-run",
+    "lint": "ng lint",
+    "prettier": "npx prettier --write ."
   },
   "private": true,
   "dependencies": {
@@ -31,13 +33,18 @@
     "primeng": ">=17.18.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.13",
-    "@angular/cli": "~18.2.13",
+    "@angular-devkit/build-angular": "^18.2.12",
+    "@angular/cli": "~18.2.12",
     "@angular/compiler-cli": "^18.2.13",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "18.4.2",
+    "commit-and-tag-version": "^12.5.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -45,7 +52,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.2.1",
-    "commit-and-tag-version": "^12.5.0",
-    "typescript": "~5.4.5"
+    "prettier": "^3.3.3",
+    "prettier-eslint": "^16.3.0",
+    "typescript": "~5.4.5",
+    "typescript-eslint": "8.15.0"
   }
 }

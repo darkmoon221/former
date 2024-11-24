@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {TestingModule} from '../testing/testing.module';
+import { TestingModule } from '../testing/testing.module';
 
 import { GeneratedFormActionsComponent } from './generated-form-actions.component';
 
@@ -10,7 +10,7 @@ describe('GeneratedFormActionsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [TestingModule],
-      declarations: [GeneratedFormActionsComponent]
+      declarations: [GeneratedFormActionsComponent],
     });
     fixture = TestBed.createComponent(GeneratedFormActionsComponent);
     component = fixture.componentInstance;
