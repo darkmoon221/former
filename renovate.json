@@ -11,5 +11,7 @@
       ],
       "groupSlug": "non-major"
     }
-  ]
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
 }
