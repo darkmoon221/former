@@ -4,19 +4,17 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {Component, Input} from '@angular/core';
-import {AbstractControl} from '@angular/forms';
-import {BaseElement} from '../../model/former.model';
+import { Component, Input } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
+import { BaseElement } from '../../model/former.model';
 
 @Component({
   selector: 'lib-validation-error',
   templateUrl: './validation-error.component.html',
-  styleUrls: ['./validation-error.component.css']
+  styleUrls: ['./validation-error.component.css'],
 })
 export class ValidationErrorComponent {
-
   @Input() control?: AbstractControl;
   @Input() field?: BaseElement;
-  @Input() key?: String;
-
+  @Input() key?: string;
 }

@@ -4,20 +4,19 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {KeyValue} from '@angular/common';
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import { KeyValue } from '@angular/common';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import FormerUtils from '../former.utils';
-import {GeneratedFormComponent} from '../generated-form/generated-form.component';
-import {Align} from '../model/former.enum';
-import {ActionButton} from '../model/former.model';
+import { GeneratedFormComponent } from '../generated-form/generated-form.component';
+import { Align } from '../model/former.enum';
+import { ActionButton } from '../model/former.model';
 
 @Component({
   selector: 'lib-generated-form-actions',
   templateUrl: './generated-form-actions.component.html',
-  styleUrls: ['./generated-form-actions.component.css']
+  styleUrls: ['./generated-form-actions.component.css'],
 })
 export class GeneratedFormActionsComponent implements OnInit, OnChanges {
-
   @Input() form?: GeneratedFormComponent;
 
   leftActions: KeyValue<string, ActionButton>[] = [];

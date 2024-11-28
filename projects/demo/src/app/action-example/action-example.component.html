@@ -7,14 +7,14 @@
 <lib-generated-form
   #genForm
   [formDefinition]="formDefinition"
-  (onChanges)="formChanged($event)"
-  (onSubmit)="formSubmitted($event)"
-></lib-generated-form>
+  (changesEvent)="formChanged($event)"
+  (submitEvent)="formSubmitted($event)"></lib-generated-form>
 
 <lib-generated-form-actions [form]="genForm"></lib-generated-form-actions>
 
 <div>
-<pre>
-{{formValues | json}}
-</pre>
+  <pre
+    >{{ formValues | json }}
+</pre
+  >
 </div>

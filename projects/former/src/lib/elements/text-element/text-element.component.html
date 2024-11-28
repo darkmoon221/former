@@ -12,10 +12,12 @@
         [id]="key"
         [name]="key"
         [class]="'p-inputtext-sm w-full'"
-        [formControlName]="key"
-      />
-      <label [for]="key">{{element.value.title}}</label>
+        [formControlName]="key" />
+      <label [for]="key">{{ element.value.title }}</label>
     </span>
-    <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
+    <lib-validation-error
+      [control]="control"
+      [key]="key"
+      [field]="field"></lib-validation-error>
   </div>
 </div>

@@ -4,15 +4,13 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {Component} from '@angular/core';
-import {TextElement} from '../../model/former.model';
-import {BaseElementComponent} from '../base-element.component';
+import { Component } from '@angular/core';
+import { TextElement } from '../../model/former.model';
+import { BaseElementComponent } from '../base-element.component';
 
 @Component({
   selector: 'lib-text-element',
   templateUrl: './text-element.component.html',
-  styleUrls: ['./text-element.component.css']
+  styleUrls: ['./text-element.component.css'],
 })
-export class TextElementComponent extends BaseElementComponent<TextElement> {
-
-}
+export class TextElementComponent extends BaseElementComponent<TextElement> {}

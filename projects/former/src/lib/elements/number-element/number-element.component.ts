@@ -4,19 +4,17 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {Component, OnInit} from '@angular/core';
-import {NumberElement} from '../../model/former.model';
-import {BaseElementComponent} from '../base-element.component';
+import { Component, OnInit } from '@angular/core';
+import { NumberElement } from '../../model/former.model';
+import { BaseElementComponent } from '../base-element.component';
 import { NumberMode } from '../../model/former.enum';
-
 
 @Component({
   selector: 'lib-number-element',
   templateUrl: './number-element.component.html',
-  styleUrls: ['./number-element.component.css']
+  styleUrls: ['./number-element.component.css'],
 })
 export class NumberElementComponent extends BaseElementComponent<NumberElement> implements OnInit {
-
   get mode() {
     if (this.field && this.field.mode) {
       return this.field.mode;
@@ -32,5 +30,4 @@ export class NumberElementComponent extends BaseElementComponent<NumberElement> 
       return 'EUR';
     }
   }
-
 }

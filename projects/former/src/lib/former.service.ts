@@ -4,16 +4,15 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {inject, Injectable} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
-import {ElementType, ValidationType} from './model/former.enum';
-import {BaseElement, Element, Elements, FormDefinition, MaxFormValidator, MaxLengthFormValidator, MinFormValidator, MinLengthFormValidator, PatternFormValidator} from './model/former.model';
+import { inject, Injectable } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { ElementType, ValidationType } from './model/former.enum';
+import { BaseElement, Element, Elements, FormDefinition, MaxFormValidator, MaxLengthFormValidator, MinFormValidator, MinLengthFormValidator, PatternFormValidator } from './model/former.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FormerService {
-
   readonly fb = inject(FormBuilder);
 
   generateForm(formDefinition: FormDefinition): FormGroup {
@@ -25,14 +24,15 @@ export class FormerService {
   }
 
   addControlRecursive(formGroup: FormGroup, elements: Elements) {
-    for (let key of Object.keys(elements)) {
+    for (const key of Object.keys(elements)) {
       const element: Element = elements[key];
       switch (element.type) {
-        case ElementType.GroupElement:
+        case ElementType.GroupElement: {
           const nestedGroup = this.fb.group({});
           this.addControlRecursive(nestedGroup, element.elements);
           formGroup.addControl(key, nestedGroup);
           break;
+        }
         case ElementType.GridColumnElement:
         case ElementType.GridLayoutElement:
         case ElementType.CardElement:
@@ -50,13 +50,13 @@ export class FormerService {
     const validators: ValidatorFn[] = [];
 
     if (element.validators) {
-      for (let validator of element.validators) {
+      for (const validator of element.validators) {
         switch (validator.validationType) {
           case ValidationType.Min:
-            validators.push(Validators.max((validator as MinFormValidator).min))
+            validators.push(Validators.max((validator as MinFormValidator).min));
             break;
           case ValidationType.Max:
-            validators.push(Validators.max((validator as MaxFormValidator).max))
+            validators.push(Validators.max((validator as MaxFormValidator).max));
             break;
           case ValidationType.Required:
             validators.push(Validators.required);
@@ -81,5 +81,4 @@ export class FormerService {
 
     return validators;
   }
-
 }

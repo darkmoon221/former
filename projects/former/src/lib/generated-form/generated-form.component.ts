@@ -4,25 +4,25 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import {KeyValue} from '@angular/common';
-import {AfterContentChecked, ChangeDetectorRef, Component, ContentChildren, ElementRef, EventEmitter, inject, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges, TemplateRef, ViewChild, ViewChildren} from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import {TemplateNameDirective} from '../directive/template-name.directive';
-import {FormerService} from '../former.service';
-import {ActionType} from '../model/former.enum';
-import {ActionButton, ActionResult, FormDefinition} from '../model/former.model';
+import { KeyValue } from '@angular/common';
+import { AfterContentChecked, ChangeDetectorRef, Component, ContentChildren, EventEmitter, inject, Input, OnChanges, OnInit, Output, QueryList, SimpleChanges } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { TemplateNameDirective } from '../directive/template-name.directive';
+import { FormerService } from '../former.service';
+import { ActionType } from '../model/former.enum';
+import { ActionButton, ActionResult, FormDefinition } from '../model/former.model';
 
 @Component({
   selector: 'lib-generated-form',
   templateUrl: './generated-form.component.html',
-  styleUrls: ['./generated-form.component.css']
+  styleUrls: ['./generated-form.component.css'],
 })
 export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentChecked {
-
   readonly formerService = inject(FormerService);
   readonly cdr = inject(ChangeDetectorRef);
 
-  @ContentChildren(TemplateNameDirective) templates!: QueryList<TemplateNameDirective>
+  @ContentChildren(TemplateNameDirective)
+  templates!: QueryList<TemplateNameDirective>;
 
   @Input() formDefinition!: FormDefinition;
 
@@ -30,14 +30,14 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
 
   form!: FormGroup;
 
-  @Output() onChanges = new EventEmitter<any>();
-  @Output() onSubmit = new EventEmitter<ActionResult>();
+  @Output() changesEvent = new EventEmitter<any>();
+  @Output() submitEvent = new EventEmitter<ActionResult>();
 
   actionHandler?: ActionButton;
 
   ngOnInit(): void {
     this.form = this.formerService.generateForm(this.formDefinition);
-    this.form.valueChanges.subscribe(data => this.onChanges.emit(data));
+    this.form.valueChanges.subscribe(data => this.changesEvent.emit(data));
     this.form.patchValue(this.formValues);
 
     this.form.valueChanges.subscribe(() => this.updateButtonState());
@@ -45,7 +45,7 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.form && changes['formValues']) {
-      this.form.patchValue(this.formValues, {emitEvent: false});
+      this.form.patchValue(this.formValues, { emitEvent: false });
     }
   }
 
@@ -54,10 +54,10 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
   }
 
   // Preserve original property order
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   originalOrder = (a: KeyValue<any, any>, b: KeyValue<any, any>): number => {
     return 0;
   };
-
 
   setActionHandler(action: ActionButton) {
     this.actionHandler = action;
@@ -65,7 +65,10 @@ export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentCh
 
   callActionHandler() {
     if (this.actionHandler) {
-      this.onSubmit.emit({action: this.actionHandler, payload: this.form.value});
+      this.submitEvent.emit({
+        action: this.actionHandler,
+        payload: this.form.value,
+      });
     }
   }
 

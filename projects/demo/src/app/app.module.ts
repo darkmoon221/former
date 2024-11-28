@@ -5,20 +5,20 @@
  * Please see LICENCE for complete licence text.
  */
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {RouterModule, RouterOutlet, Routes} from '@angular/router';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {FormerModule} from 'former';
-import {TabMenuModule} from 'primeng/tabmenu';
-import {AllElementsExampleComponent} from './all-elements-example/all-elements-example.component';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, RouterOutlet, Routes } from '@angular/router';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormerModule } from 'former';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { AllElementsExampleComponent } from './all-elements-example/all-elements-example.component';
 
-import {AppComponent} from './app.component';
-import {LayoutExampleComponent} from './layout-example/layout-example.component';
-import {ValidationExampleComponent} from './validation-example/validation-example.component';
+import { AppComponent } from './app.component';
+import { LayoutExampleComponent } from './layout-example/layout-example.component';
+import { ValidationExampleComponent } from './validation-example/validation-example.component';
 import { ActionExampleComponent } from './action-example/action-example.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { TemplateExampleComponent } from './template-example/template-example.component';
@@ -34,45 +34,42 @@ const appRoutes: Routes = [
   },
   {
     path: 'validation',
-    component: ValidationExampleComponent
+    component: ValidationExampleComponent,
   },
   {
     path: 'layout',
-    component: LayoutExampleComponent
+    component: LayoutExampleComponent,
   },
   {
     path: 'actions',
-    component: ActionExampleComponent
+    component: ActionExampleComponent,
   },
   {
     path: 'templates',
-    component: TemplateExampleComponent
-  }
+    component: TemplateExampleComponent,
+  },
 ];
 
-@NgModule({ declarations: [
-        AppComponent,
-        ValidationExampleComponent,
-        AllElementsExampleComponent,
-        LayoutExampleComponent,
-        ActionExampleComponent,
-        TestComponentComponent,
-        TemplateExampleComponent,
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        BrowserAnimationsModule,
-        TranslateModule.forRoot({
-            defaultLanguage: 'de',
-            loader: {
-                provide: TranslateLoader,
-                useFactory: createTranslateLoader,
-                deps: [HttpClient]
-            }
-        }),
-        RouterModule.forRoot(appRoutes),
-        TabMenuModule,
-        FormerModule,
-        ReactiveFormsModule,
-        RouterOutlet], providers: [provideHttpClient(withInterceptorsFromDi())] })
-export class AppModule {
-}
+@NgModule({
+  declarations: [AppComponent, ValidationExampleComponent, AllElementsExampleComponent, LayoutExampleComponent, ActionExampleComponent, TestComponentComponent, TemplateExampleComponent],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'de',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
+    RouterModule.forRoot(appRoutes),
+    TabMenuModule,
+    FormerModule,
+    ReactiveFormsModule,
+    RouterOutlet,
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
+export class AppModule {}
