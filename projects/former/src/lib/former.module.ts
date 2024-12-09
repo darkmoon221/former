@@ -16,7 +16,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TextareaModule } from 'primeng/textarea';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { MessageModule } from 'primeng/message';
 import { CalendarElementComponent } from './elements/calendar-element/calendar-element.component';
@@ -35,7 +35,7 @@ import { DisplayTextElementComponent } from './elements/display-text-element/dis
 import { TemplateElementComponent } from './elements/template-element/template-element.component';
 import { TemplateNameDirective } from './directive/template-name.directive';
 
-const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, MessageModule, KeyFilterModule, AutoCompleteModule, CheckboxModule, ButtonModule, InputNumberModule, InputTextareaModule];
+const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, MessageModule, KeyFilterModule, AutoCompleteModule, CheckboxModule, ButtonModule, InputNumberModule, TextareaModule];
 
 @NgModule({
   declarations: [
