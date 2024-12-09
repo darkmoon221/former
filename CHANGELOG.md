@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.24](https://github.com/darkmoon221/former/compare/v0.0.23...v0.0.24) (2024-12-09)
+
 ## [0.0.23](https://github.com/darkmoon221/former/compare/v0.0.22...v0.0.23) (2024-12-09)
 
 
