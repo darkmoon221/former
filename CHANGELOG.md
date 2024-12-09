@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.0.23](https://github.com/darkmoon221/former/compare/v0.0.22...v0.0.23) (2024-12-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency primeng to v17.18.12 ([3883288](https://github.com/darkmoon221/former/commit/38832886a20388e6b39511f6df1136e26673f1d3))
+* **deps:** update dependency tslib to v2.8.1 ([e3eea91](https://github.com/darkmoon221/former/commit/e3eea91e6e6b46ad5232cb4020ca4da4d0e2537b))
 
 ### [0.0.22](https://github.com/darkmoon221/former/compare/v0.0.21...v0.0.22) (2024-11-23)
 
