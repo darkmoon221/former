@@ -43,7 +43,7 @@
     "angular-eslint": "18.4.2",
     "commit-and-tag-version": "^12.5.0",
     "eslint": "^9.15.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "jasmine-core": "~5.4.0",
     "karma": "~6.4.0",
