@@ -4,10 +4,7 @@
   ~
   ~ Please see LICENCE for complete licence text.
   -->
-<lib-generated-form
-  #genForm
-  [formDefinition]="formDefinition"
-  (onChanges)="formChanged($event)"></lib-generated-form>
+<lib-generated-form #genForm [formDefinition]="formDefinition" (changesEvent)="formChanged($event)"></lib-generated-form>
 
 <div>
   <pre

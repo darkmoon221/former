@@ -6,13 +6,8 @@
   -->
 <div>
   <form [formGroup]="form">
-    <div
-      *ngFor="let element of formDefinition.elements | keyvalue: originalOrder">
-      <div
-        lib-generated-form-element
-        [element]="element"
-        [formGroup]="form"
-        [templates]="templates"></div>
+    <div *ngFor="let element of formDefinition.elements | keyvalue: originalOrder">
+      <div lib-generated-form-element [element]="element" [formGroup]="form" [templates]="templates"></div>
     </div>
   </form>
 </div>

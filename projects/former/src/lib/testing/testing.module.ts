@@ -15,12 +15,12 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
-import { TextareaModule } from 'primeng/textarea';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { MessageModule } from 'primeng/message';
 import { ValidationErrorComponent } from '../elements/validation-error/validation-error.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
-const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, MessageModule, KeyFilterModule, AutoCompleteModule, CheckboxModule, ButtonModule, InputNumberModule, TextareaModule];
+const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, MessageModule, KeyFilterModule, AutoCompleteModule, CheckboxModule, ButtonModule, InputNumberModule, InputTextareaModule];
 
 @NgModule({
   declarations: [ValidationErrorComponent],

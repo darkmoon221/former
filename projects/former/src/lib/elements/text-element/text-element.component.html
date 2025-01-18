@@ -7,17 +7,9 @@
 <div [formGroup]="formGroup">
   <div>
     <span class="p-float-label mt-4">
-      <input
-        pInputText
-        [id]="key"
-        [name]="key"
-        [class]="'p-inputtext-sm w-full'"
-        [formControlName]="key" />
+      <input pInputText [id]="key" [name]="key" [class]="'p-inputtext-sm w-full'" [formControlName]="key" />
       <label [for]="key">{{ element.value.title }}</label>
     </span>
-    <lib-validation-error
-      [control]="control"
-      [key]="key"
-      [field]="field"></lib-validation-error>
+    <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
   </div>
 </div>

@@ -5,71 +5,17 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [ngSwitch]="element.value.type">
-  <lib-text-element
-    *ngSwitchCase="TextElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-text-element>
-  <lib-display-text-element
-    *ngSwitchCase="DisplayTextElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-display-text-element>
-  <lib-text-area-element
-    *ngSwitchCase="TextAreaElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-text-area-element>
-  <lib-number-element
-    *ngSwitchCase="NumberElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-number-element>
-  <lib-group-element
-    *ngSwitchCase="GroupElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-group-element>
-  <lib-calendar-element
-    *ngSwitchCase="CalendarElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-calendar-element>
-  <lib-dropdown-element
-    *ngSwitchCase="DropdownElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-dropdown-element>
-  <lib-checkbox-element
-    *ngSwitchCase="CheckboxElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-checkbox-element>
-  <lib-input-group-element
-    *ngSwitchCase="InputGroupElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-input-group-element>
-  <lib-autocomplete-element
-    *ngSwitchCase="AutocompleteElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-autocomplete-element>
-  <lib-card-element
-    *ngSwitchCase="CardElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></lib-card-element>
-  <div
-    lib-grid-layout-element
-    *ngSwitchCase="GridLayoutElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"></div>
-  <lib-template-element
-    *ngSwitchCase="TemplateElement"
-    [element]="anyElement"
-    [formGroup]="formGroup"
-    [parentKey]="parentKey"
-    [templates]="templates"></lib-template-element>
+  <lib-text-element *ngSwitchCase="TextElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-element>
+  <lib-display-text-element *ngSwitchCase="DisplayTextElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-display-text-element>
+  <lib-text-area-element *ngSwitchCase="TextAreaElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-text-area-element>
+  <lib-number-element *ngSwitchCase="NumberElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-number-element>
+  <lib-group-element *ngSwitchCase="GroupElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-group-element>
+  <lib-calendar-element *ngSwitchCase="CalendarElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-calendar-element>
+  <lib-dropdown-element *ngSwitchCase="DropdownElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-dropdown-element>
+  <lib-checkbox-element *ngSwitchCase="CheckboxElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-checkbox-element>
+  <lib-input-group-element *ngSwitchCase="InputGroupElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-input-group-element>
+  <lib-autocomplete-element *ngSwitchCase="AutocompleteElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-autocomplete-element>
+  <lib-card-element *ngSwitchCase="CardElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></lib-card-element>
+  <div lib-grid-layout-element *ngSwitchCase="GridLayoutElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey"></div>
+  <lib-template-element *ngSwitchCase="TemplateElement" [element]="anyElement" [formGroup]="formGroup" [parentKey]="parentKey" [templates]="templates"></lib-template-element>
 </div>

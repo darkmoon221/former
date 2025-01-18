@@ -6,10 +6,6 @@
   -->
 <p-card [header]="field.title" [styleClass]="field.cssClass">
   <div *ngFor="let element of field.elements | keyvalue: originalOrder">
-    <div
-      lib-generated-form-element
-      [formGroup]="formGroup"
-      [element]="element"
-      [parentKey]="key"></div>
+    <div lib-generated-form-element [formGroup]="formGroup" [element]="element" [parentKey]="key"></div>
   </div>
 </p-card>

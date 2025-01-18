@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TemplateExampleComponent } from './template-example.component';
+import { TestingModule } from '../testing.module';
 
 describe('TemplateExampleComponent', () => {
   let component: TemplateExampleComponent;
@@ -8,6 +9,7 @@ describe('TemplateExampleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [TestingModule],
       declarations: [TemplateExampleComponent],
     });
     fixture = TestBed.createComponent(TemplateExampleComponent);

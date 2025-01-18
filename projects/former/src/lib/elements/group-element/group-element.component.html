@@ -5,13 +5,7 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <div
-    *ngFor="let element of field.elements | keyvalue: originalOrder"
-    [formGroupName]="key">
-    <div
-      lib-generated-form-element
-      [formGroup]="childGroup"
-      [element]="element"
-      [parentKey]="key"></div>
+  <div *ngFor="let element of field.elements | keyvalue: originalOrder" [formGroupName]="key">
+    <div lib-generated-form-element [formGroup]="childGroup" [element]="element" [parentKey]="key"></div>
   </div>
 </div>

@@ -34,10 +34,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/former/**/*.ts",
-              "projects/former/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/former/**/*.ts", "projects/former/**/*.html"]
           }
         }
       }
@@ -62,10 +59,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "projects/demo/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
-            ],
+            "assets": ["projects/demo/src/favicon.ico", "projects/demo/src/assets"],
             "styles": ["projects/demo/src/styles.scss"],
             "scripts": []
           },
@@ -120,10 +114,7 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/demo/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
-            ],
+            "assets": ["projects/demo/src/favicon.ico", "projects/demo/src/assets"],
             "styles": ["projects/demo/src/styles.scss"],
             "scripts": []
           }
@@ -131,10 +122,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/demo/**/*.ts",
-              "projects/demo/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/demo/**/*.ts", "projects/demo/**/*.html"]
           }
         }
       }
