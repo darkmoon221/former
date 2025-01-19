@@ -12,6 +12,7 @@ import { BaseElement } from '../../model/former.model';
   selector: 'lib-validation-error',
   templateUrl: './validation-error.component.html',
   styleUrls: ['./validation-error.component.css'],
+  standalone: false,
 })
 export class ValidationErrorComponent {
   @Input() control?: AbstractControl;

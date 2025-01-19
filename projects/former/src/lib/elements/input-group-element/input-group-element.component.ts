@@ -12,5 +12,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-input-group-element',
   templateUrl: './input-group-element.component.html',
   styleUrls: ['./input-group-element.component.css'],
+  standalone: false,
 })
 export class InputGroupElementComponent extends BaseElementComponent<InputGroupElement> {}

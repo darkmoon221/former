@@ -12,5 +12,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-text-area-element',
   templateUrl: './text-area-element.component.html',
   styleUrls: ['./text-area-element.component.css'],
+  standalone: false,
 })
 export class TextAreaElementComponent extends BaseElementComponent<TextAreaElement> {}

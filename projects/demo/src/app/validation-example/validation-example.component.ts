@@ -11,6 +11,7 @@ import { ElementType, FormDefinition, ValidationType } from 'former';
   selector: 'app-validation-example',
   templateUrl: './validation-example.component.html',
   styleUrls: ['./validation-example.component.scss'],
+  standalone: false,
 })
 export class ValidationExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);

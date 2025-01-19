@@ -16,6 +16,7 @@ import { BaseElementComponent } from '../elements/base-element.component';
   selector: '[lib-generated-form-element]',
   templateUrl: './generated-form-element.component.html',
   styleUrls: ['./generated-form-element.component.css'],
+  standalone: false,
 })
 export class GeneratedFormElementComponent {
   protected readonly TextElement = ElementType.TextElement;
@@ -50,6 +51,7 @@ export class GeneratedFormElementComponent {
   selector: '[lib-grid-layout-element]',
   templateUrl: '../elements/grid-layout-element/grid-layout-element.component.html',
   styleUrls: ['../elements/grid-layout-element/grid-layout-element.component.css'],
+  standalone: false,
 })
 export class GridLayoutElementComponent extends BaseElementComponent<GridLayoutElement> {
   getElementClass(element: any) {
@@ -71,6 +73,7 @@ export class GridLayoutElementComponent extends BaseElementComponent<GridLayoutE
   selector: '[lib-grid-column-element]',
   templateUrl: '../elements/grid-column-element/grid-column-element.component.html',
   styleUrls: ['../elements/grid-column-element/grid-column-element.component.css'],
+  standalone: false,
 })
 export class GridColumnElementComponent extends BaseElementComponent<GridColumnElement> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -83,6 +86,7 @@ export class GridColumnElementComponent extends BaseElementComponent<GridColumnE
   selector: 'lib-group-element',
   templateUrl: '../elements/group-element/group-element.component.html',
   styleUrls: ['../elements/group-element/group-element.component.css'],
+  standalone: false,
 })
 export class GroupElementComponent extends BaseElementComponent<GroupElement> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -99,6 +103,7 @@ export class GroupElementComponent extends BaseElementComponent<GroupElement> {
   selector: 'lib-card-element',
   templateUrl: '../elements/card-element/card-element.component.html',
   styleUrls: ['../elements/card-element/card-element.component.css'],
+  standalone: false,
 })
 export class CardElementComponent extends BaseElementComponent<CardElement> {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

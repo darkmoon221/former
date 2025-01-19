@@ -13,6 +13,7 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-autocomplete-element',
   templateUrl: './autocomplete-element.component.html',
   styleUrls: ['./autocomplete-element.component.css'],
+  standalone: false,
 })
 export class AutocompleteElementComponent extends BaseElementComponent<AutoCompleteElement> implements OnInit, AfterViewInit {
   @ViewChild('autoCompleteElement') elementRef?: ElementRef;

@@ -12,6 +12,7 @@ import { ActionResult, ActionType, Align, ElementType, FormDefinition, Generated
   selector: 'app-action-example',
   templateUrl: './action-example.component.html',
   styleUrls: ['./action-example.component.scss'],
+  standalone: false,
 })
 export class ActionExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);

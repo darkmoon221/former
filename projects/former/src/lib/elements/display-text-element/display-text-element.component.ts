@@ -6,5 +6,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-display-text-element',
   templateUrl: './display-text-element.component.html',
   styleUrls: ['./display-text-element.component.css'],
+  standalone: false,
 })
 export class DisplayTextElementComponent extends BaseElementComponent<DisplayTextElement> {}

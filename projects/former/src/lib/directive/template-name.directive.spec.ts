@@ -5,6 +5,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 @Component({
   template: ` <ng-template name="one">Hello World</ng-template> `,
+  standalone: false,
 })
 class WrapperComponent {
   @ViewChild(NgTemplateOutlet) template?: NgTemplateOutlet;

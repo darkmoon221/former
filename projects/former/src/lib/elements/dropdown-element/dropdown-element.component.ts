@@ -12,5 +12,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-dropdown-element',
   templateUrl: './dropdown-element.component.html',
   styleUrls: ['./dropdown-element.component.css'],
+  standalone: false,
 })
 export class DropdownElementComponent extends BaseElementComponent<DropdownElement> {}

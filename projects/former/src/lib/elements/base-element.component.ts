@@ -12,6 +12,7 @@ import { DisableElement } from '../model/former.model';
 @Component({
   selector: 'lib-base-element-component',
   template: '<div>do not use directly</div>',
+  standalone: false,
 })
 export abstract class BaseElementComponent<T extends object> implements OnInit {
   @Input() parentKey = '';

@@ -13,6 +13,7 @@ import { NumberMode } from '../../model/former.enum';
   selector: 'lib-number-element',
   templateUrl: './number-element.component.html',
   styleUrls: ['./number-element.component.css'],
+  standalone: false,
 })
 export class NumberElementComponent extends BaseElementComponent<NumberElement> implements OnInit {
   get mode() {

@@ -21,7 +21,7 @@
       ],
       "versioning": "angular",
       "rangeStrategy": "increase",
-      "allowedVersions": "17.x.x || 18.x.x"
+      "allowedVersions": "19.x.x"
     }
   ],
   "prHourlyLimit": 0,

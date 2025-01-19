@@ -13,6 +13,7 @@ import { of } from 'rxjs';
   selector: 'app-all-elements-example',
   templateUrl: './all-elements-example.component.html',
   styleUrls: ['./all-elements-example.component.scss'],
+  standalone: false,
 })
 export class AllElementsExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);

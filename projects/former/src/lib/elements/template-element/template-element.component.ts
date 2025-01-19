@@ -13,6 +13,7 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-template-element',
   templateUrl: './template-element.component.html',
   styleUrls: ['./template-element.component.css'],
+  standalone: false,
 })
 export class TemplateElementComponent extends BaseElementComponent<TemplateElement> implements OnChanges {
   @Input() templates?: QueryList<TemplateNameDirective>;

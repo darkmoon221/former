@@ -12,5 +12,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-checkbox-element',
   templateUrl: './checkbox-element.component.html',
   styleUrls: ['./checkbox-element.component.css'],
+  standalone: false,
 })
 export class CheckboxElementComponent extends BaseElementComponent<CheckboxElement> {}

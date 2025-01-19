@@ -11,6 +11,7 @@ import { ElementType, FormDefinition } from 'former';
   selector: 'app-template-example',
   templateUrl: './template-example.component.html',
   styleUrls: ['./template-example.component.scss'],
+  standalone: false,
 })
 export class TemplateExampleComponent {
   formDefinition: FormDefinition = {

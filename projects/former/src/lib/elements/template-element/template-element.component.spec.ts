@@ -12,6 +12,7 @@ import { TemplateNameDirective } from '../../directive/template-name.directive';
     <ng-template name="one">Hello World</ng-template>
     <ng-template name="two">Hello Test</ng-template>
   `,
+  standalone: false,
 })
 class WrapperComponent {
   @ViewChildren(TemplateNameDirective)

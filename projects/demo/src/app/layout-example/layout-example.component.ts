@@ -11,6 +11,7 @@ import { ElementType, Elements, FormDefinition } from 'former';
   selector: 'app-layout-example',
   templateUrl: './layout-example.component.html',
   styleUrls: ['./layout-example.component.scss'],
+  standalone: false,
 })
 export class LayoutExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);

@@ -16,6 +16,7 @@ import { ActionButton, ActionResult, FormDefinition } from '../model/former.mode
   selector: 'lib-generated-form',
   templateUrl: './generated-form.component.html',
   styleUrls: ['./generated-form.component.css'],
+  standalone: false,
 })
 export class GeneratedFormComponent implements OnInit, OnChanges, AfterContentChecked {
   readonly formerService = inject(FormerService);

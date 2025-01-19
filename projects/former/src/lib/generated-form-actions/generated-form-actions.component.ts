@@ -15,6 +15,7 @@ import { ActionButton } from '../model/former.model';
   selector: 'lib-generated-form-actions',
   templateUrl: './generated-form-actions.component.html',
   styleUrls: ['./generated-form-actions.component.css'],
+  standalone: false,
 })
 export class GeneratedFormActionsComponent implements OnInit, OnChanges {
   @Input() form?: GeneratedFormComponent;

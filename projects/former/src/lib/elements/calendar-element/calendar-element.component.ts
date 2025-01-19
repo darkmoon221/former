@@ -12,5 +12,6 @@ import { BaseElementComponent } from '../base-element.component';
   selector: 'lib-calendar-element',
   templateUrl: './calendar-element.component.html',
   styleUrls: ['./calendar-element.component.css'],
+  standalone: false,
 })
 export class CalendarElementComponent extends BaseElementComponent<CalendarElement> {}

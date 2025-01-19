@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
   selector: 'app-test-component',
   templateUrl: './test-component.component.html',
   styleUrls: ['./test-component.component.scss'],
+  standalone: false,
 })
 export class TestComponentComponent {}
