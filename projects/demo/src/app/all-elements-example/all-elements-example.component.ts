@@ -113,7 +113,7 @@ export class AllElementsExampleComponent implements AfterContentChecked {
       card: {
         type: ElementType.CardElement,
         title: 'Card',
-        cssClass: 'mt-4',
+        cssClass: 'mt-12',
         elements: {
           displayText: {
             type: ElementType.DisplayTextElement,

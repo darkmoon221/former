@@ -21,7 +21,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
   nestedGrid: Elements = {
     nestedGrid: {
       type: ElementType.GridLayoutElement,
-      class: 'grid ',
+      class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6 ',
       elements: {
         left: {
           type: ElementType.GridColumnElement,
@@ -52,7 +52,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
     elements: {
       rowOne: {
         type: ElementType.GridLayoutElement,
-        class: 'grid',
+        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
         elements: {
           col_1_1: {
             type: ElementType.GridColumnElement,
@@ -78,7 +78,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
       },
       rowTwo: {
         type: ElementType.GridLayoutElement,
-        class: 'grid',
+        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
         elements: {
           col_2_1: {
             type: ElementType.GridColumnElement,
@@ -94,7 +94,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
       },
       rowThree: {
         type: ElementType.GridLayoutElement,
-        class: 'grid',
+        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
         elements: {
           col_3_1: {
             type: ElementType.GridColumnElement,

@@ -5,7 +5,7 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <p-floatlabel class="mt-4">
+  <p-floatlabel class="mt-6">
     <p-select [formControlName]="key" [options]="element.value.options | async" [showClear]="true" optionLabel="{{ element.value.optionLabel || 'name' }}" optionValue="{{ element.value.optionValue || 'code' }}" [styleClass]="'w-full'"> </p-select>
     <label [for]="key">{{ element.value.title }}</label>
   </p-floatlabel>
