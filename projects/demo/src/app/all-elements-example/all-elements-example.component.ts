@@ -5,9 +5,9 @@
  * Please see LICENCE for complete licence text.
  */
 import { AfterContentChecked, ChangeDetectorRef, Component, inject } from '@angular/core';
-import { ElementType, FormDefinition } from 'former';
 import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
 import { of } from 'rxjs';
+import { ElementType, FormDefinition } from 'former';
 
 @Component({
   selector: 'app-all-elements-example',
@@ -85,6 +85,7 @@ export class AllElementsExampleComponent implements AfterContentChecked {
       inputGroup: {
         type: ElementType.InputGroupElement,
         title: 'Inputgroup',
+        icon: '$',
         unit: '€',
       },
       inputGroupWithKeyFilter: {
@@ -107,6 +108,7 @@ export class AllElementsExampleComponent implements AfterContentChecked {
         type: ElementType.TextAreaElement,
         title: 'Text area',
         rows: 10,
+        cssClass: 'w-full',
       },
       card: {
         type: ElementType.CardElement,

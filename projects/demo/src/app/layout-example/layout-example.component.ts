@@ -25,7 +25,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
       elements: {
         left: {
           type: ElementType.GridColumnElement,
-          class: 'col bg-orange-100',
+          class: 'col bg-orange',
           elements: {
             text_3_2_1: {
               type: ElementType.TextElement,
@@ -35,7 +35,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
         },
         right: {
           type: ElementType.GridColumnElement,
-          class: 'col bg-gray-100',
+          class: 'col bg-gray',
           elements: {
             text_3_2_2: {
               type: ElementType.TextElement,
@@ -56,7 +56,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
         elements: {
           col_1_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-blue-100',
+            class: 'col bg-blue',
             elements: {
               text_1_1: {
                 type: ElementType.TextElement,
@@ -66,7 +66,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
           },
           col_1_2: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-red-100',
+            class: 'col bg-red',
             elements: {
               text_1_2: {
                 type: ElementType.TextElement,
@@ -82,7 +82,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
         elements: {
           col_2_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-green-100',
+            class: 'col bg-green',
             elements: {
               text_2_1: {
                 type: ElementType.TextElement,
@@ -98,7 +98,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
         elements: {
           col_3_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-yellow-100',
+            class: 'col bg-yellow',
             elements: {
               text_3_1_1: {
                 type: ElementType.TextElement,
@@ -112,7 +112,7 @@ export class LayoutExampleComponent implements AfterContentChecked {
           },
           col_3_2: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-pink-100',
+            class: 'col bg-pink',
             elements: this.nestedGrid,
           },
         },

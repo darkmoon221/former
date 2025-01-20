@@ -12,7 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { FormerModule } from 'former';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { AllElementsExampleComponent } from './all-elements-example/all-elements-example.component';
 
@@ -22,6 +21,13 @@ import { ValidationExampleComponent } from './validation-example/validation-exam
 import { ActionExampleComponent } from './action-example/action-example.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { TemplateExampleComponent } from './template-example/template-example.component';
+import Aura from '@primeng/themes/aura';
+import Material from '@primeng/themes/material';
+import Lara from '@primeng/themes/lara';
+import { providePrimeNG } from 'primeng/config';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { definePreset } from '@primeng/themes';
+import { FormerModule } from 'former';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,6 +56,10 @@ const appRoutes: Routes = [
   },
 ];
 
+const MyPreset = definePreset(Aura, {
+  //Your customizations, see the following sections for examples
+});
+
 @NgModule({
   declarations: [AppComponent, ValidationExampleComponent, AllElementsExampleComponent, LayoutExampleComponent, ActionExampleComponent, TestComponentComponent, TemplateExampleComponent],
   bootstrap: [AppComponent],
@@ -70,6 +80,6 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterOutlet,
   ],
-  providers: [provideHttpClient(withInterceptorsFromDi())],
+  providers: [provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync(), providePrimeNG({ theme: { preset: MyPreset, options: { darkModeSelector: true } } })],
 })
 export class AppModule {}

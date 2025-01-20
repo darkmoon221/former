@@ -5,11 +5,12 @@
  * Please see LICENCE for complete licence text.
  */
 import { KeyValue } from '@angular/common';
-import { Component, Input, QueryList } from '@angular/core';
+import { Component, inject, Input, QueryList, Sanitizer } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ElementType } from '../model/former.enum';
 import { CardElement, Element, GridColumnElement, GridLayoutElement, GroupElement, LayoutElement } from '../model/former.model';
 import { BaseElementComponent } from '../elements/base-element.component';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -54,6 +55,8 @@ export class GeneratedFormElementComponent {
   standalone: false,
 })
 export class GridLayoutElementComponent extends BaseElementComponent<GridLayoutElement> {
+  sanitizer = inject(DomSanitizer);
+
   getElementClass(element: any) {
     if ((element.value as any).type === ElementType.GridColumnElement) {
       return (element.value as any as LayoutElement).class + ' col-no-padding';

@@ -1,0 +1,27 @@
+.bg-orange {
+  background-color: var(--p-orange-300);
+}
+
+.bg-gray {
+  background-color: var(--p-gray-300);
+}
+
+.bg-blue {
+  background-color: var(--p-blue-300);
+}
+
+.bg-red {
+  background-color: var(--p-red-300);
+}
+
+.bg-green {
+  background-color: var(--p-green-300);
+}
+
+.bg-yellow {
+  background-color: var(--p-yellow-300);
+}
+
+.bg-pink {
+  background-color: var(--p-pink-300);
+}

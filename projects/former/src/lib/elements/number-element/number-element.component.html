@@ -6,7 +6,7 @@
   -->
 <div [formGroup]="formGroup">
   <div>
-    <span class="p-float-label mt-4">
+    <p-floatlabel class="mt-4">
       <p-inputNumber
         [id]="key"
         [name]="key"
@@ -15,11 +15,11 @@
         [locale]="field.locale"
         [minFractionDigits]="field.minFractionDigits"
         [maxFractionDigits]="field.maxFractionDigits"
-        [class]="'p-inputtext-sm w-full'"
+        [class]="'w-full'"
         [styleClass]="'w-full'"
         [formControlName]="key" />
       <label [for]="key">{{ element.value.title }}</label>
-    </span>
+    </p-floatlabel>
     <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
   </div>
 </div>

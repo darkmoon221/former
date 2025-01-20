@@ -34,6 +34,7 @@ module.exports = tseslint.config(
         },
       ],
       '@typescript-eslint/no-explicit-any': 'off', // Allow the use of 'any' type
+      '@angular-eslint/prefer-standalone': 'off'
     },
   },
   {

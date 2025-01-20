@@ -5,7 +5,7 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <span class="p-float-label mt-4">
+  <p-floatlabel class="p-float-label mt-4" variant="on">
     <p-autoComplete
       #autoCompleteElement
       [formControlName]="key"
@@ -13,8 +13,9 @@
       [optionLabel]="field.field"
       (completeMethod)="filter($event)"
       [style]="{ width: field.width ?? '100%' }"
-      [inputStyle]="{ width: '100%' }"></p-autoComplete>
+      [inputStyle]="{ width: '100%' }"
+      [inputId]="key"></p-autoComplete>
     <label [for]="key">{{ element.value.title }}</label>
-  </span>
+  </p-floatlabel>
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
 </div>

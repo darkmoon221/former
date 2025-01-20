@@ -5,9 +5,9 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <span class="p-float-label mt-4">
-    <p-calendar [id]="key" [name]="key" [formControlName]="key" [dateFormat]="element.value.dateFormat" [styleClass]="'p-inputtext-sm w-full'"></p-calendar>
+  <p-floatlabel class="mt-4">
+    <p-datePicker [id]="key" [name]="key" [formControlName]="key" [dateFormat]="element.value.dateFormat" [styleClass]="'w-full'"></p-datePicker>
     <label [for]="key">{{ element.value.title }}</label>
-  </span>
+  </p-floatlabel>
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
 </div>

@@ -10,10 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { ButtonModule } from 'primeng/button';
-import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
 import { CheckboxModule } from 'primeng/checkbox';
-import { DropdownModule } from 'primeng/dropdown';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { KeyFilterModule } from 'primeng/keyfilter';
@@ -33,9 +31,29 @@ import { TextAreaElementComponent } from './elements/text-area-element/text-area
 import { DisplayTextElementComponent } from './elements/display-text-element/display-text-element.component';
 import { TemplateElementComponent } from './elements/template-element/template-element.component';
 import { TemplateNameDirective } from './directive/template-name.directive';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TextareaModule } from 'primeng/textarea';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { DatePickerModule } from 'primeng/datepicker';
+import { SelectModule } from 'primeng/select';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
-const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, MessageModule, KeyFilterModule, AutoCompleteModule, CheckboxModule, ButtonModule, InputNumberModule, InputTextareaModule];
+const primeng = [
+  CardModule,
+  InputTextModule,
+  DatePickerModule,
+  SelectModule,
+  MessageModule,
+  KeyFilterModule,
+  AutoCompleteModule,
+  CheckboxModule,
+  ButtonModule,
+  InputNumberModule,
+  TextareaModule,
+  FloatLabelModule,
+  InputGroupModule,
+  InputGroupAddonModule,
+];
 
 @NgModule({
   declarations: [
@@ -61,5 +79,6 @@ const primeng = [CardModule, InputTextModule, CalendarModule, DropdownModule, Me
   ],
   imports: [CommonModule, TranslateModule, ReactiveFormsModule, ...primeng],
   exports: [GeneratedFormComponent, GeneratedFormActionsComponent, TemplateNameDirective, ...primeng],
+  // providers: [provideAnimationsAsync(), providePrimeNG({ theme: { preset: Aura } })],
 })
 export class FormerModule {}
