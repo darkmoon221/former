@@ -4,11 +4,13 @@
   ~
   ~ Please see LICENCE for complete licence text.
   -->
-<lib-generated-form [formDefinition]="formDefinition" (changesEvent)="formChanged($event)"></lib-generated-form>
+<div class="mx-6">
+  <lib-generated-form [formDefinition]="formDefinition" (changesEvent)="formChanged($event)"></lib-generated-form>
 
-<div>
-  <pre
-    >{{ formValues | json }}
+  <div class="mt-6">
+    <pre
+      >{{ formValues | json }}
 </pre
-  >
+    >
+  </div>
 </div>

@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "rangeStrategy": "bump",
   "packageRules": [
     {
       "matchPackageNames": [
@@ -18,10 +19,7 @@
         "@angular/cdk",
         "@angular-devkit/build-angular",
         "ng-packagr"
-      ],
-      "versioning": "angular",
-      "rangeStrategy": "increase",
-      "allowedVersions": "19.x.x"
+      ]
     }
   ],
   "prHourlyLimit": 0,

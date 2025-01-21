@@ -4,11 +4,10 @@
  *
  * Please see LICENCE for complete licence text.
  */
-import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
 import { KeyFilterPattern } from 'primeng/keyfilter';
 import { Observable } from 'rxjs';
 import { ActionType, Align, ElementType, NumberMode, ValidationType } from './former.enum';
-import { ScrollerOptions } from 'primeng/api';
+import { AutoCompleteElement } from './elements/autocomplete.model';
 
 export interface FormDefinition {
   title?: string;
@@ -36,10 +35,15 @@ export type Elements = Record<string, Element>;
 
 export type LayoutElements = Record<string, GridColumnElement>;
 
+export type FloatLabelType = 'in' | 'over' | 'on';
+
 export interface BaseElement {
   title?: string;
   cssClass?: string;
   validators?: FormValidator[];
+  wrapperClass?: string;
+  floatLabel?: FloatLabelType;
+  styleClass?: string;
 }
 
 export interface DisableElement {
@@ -58,6 +62,7 @@ export interface TextElement extends BaseElement, DisableElement {
 
 export interface DisplayTextElement extends BaseElement, DisableElement {
   type: ElementType.DisplayTextElement;
+  labelClass?: string;
 }
 
 export interface TextAreaElement extends BaseElement, DisableElement {
@@ -96,33 +101,33 @@ export interface DropdownElement extends BaseElement, DisableElement {
   optionValue?: string;
 }
 
-export interface AutoCompleteElement extends BaseElement, DisableElement {
-  type: ElementType.AutocompleteElement;
-  suggestions: Observable<any>;
-  field?: string;
-  filter?: (event: AutoCompleteCompleteEvent, data: any[]) => any[];
-  width?: string;
-  options?: AutoCompleteOptions;
-}
+// export interface AutoCompleteElement extends BaseElement, DisableElement {
+//   type: ElementType.AutocompleteElement;
+//   suggestions: Observable<any>;
+//   field?: string;
+//   filter?: (event: AutoCompleteCompleteEvent, data: any[]) => any[];
+//   width?: string;
+//   options?: AutoCompleteOptions;
+// }
 
-export interface AutoCompleteOptions {
-  minLength?: number;
-  delay?: number;
-  style?: Record<string, any> | null | undefined;
-  panelStyle?: Record<string, any> | null | undefined;
-  styleClass?: string | undefined;
-  panelStyleClass?: string | undefined;
-  inputStyle?: Record<string, any> | null | undefined;
-  inputId?: string | undefined;
-  inputStyleClass?: string | undefined;
-  placeholder?: string | undefined;
-  readonly?: boolean | undefined;
-  disabled?: boolean | undefined;
-  scrollHeight?: string;
-  lazy?: boolean;
-  virtualScroll?: ScrollerOptions | undefined;
-  maxLength?: number | undefined;
-}
+// export interface AutoCompleteOptions {
+//   minLength?: number;
+//   delay?: number;
+//   style?: Record<string, any> | null | undefined;
+//   panelStyle?: Record<string, any> | null | undefined;
+//   styleClass?: string | undefined;
+//   panelStyleClass?: string | undefined;
+//   inputStyle?: Record<string, any> | null | undefined;
+//   inputId?: string | undefined;
+//   inputStyleClass?: string | undefined;
+//   placeholder?: string | undefined;
+//   readonly?: boolean | undefined;
+//   disabled?: boolean | undefined;
+//   scrollHeight?: string;
+//   lazy?: boolean;
+//   virtualScroll?: ScrollerOptions | undefined;
+//   maxLength?: number | undefined;
+// }
 
 export interface CheckboxElement extends BaseElement, DisableElement {
   type: ElementType.CheckboxElement;

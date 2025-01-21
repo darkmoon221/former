@@ -6,8 +6,8 @@
   -->
 <div [formGroup]="formGroup">
   <div>
-    <p-floatlabel class="mt-6">
-      <input pInputText [id]="key" [name]="key" [class]="'w-full'" [formControlName]="key" />
+    <p-floatlabel [class]="field.wrapperClass" [variant]="field.floatLabel ? field.floatLabel : 'over'">
+      <input pInputText [id]="key" [name]="key" [class]="field.cssClass" [formControlName]="key" />
       <label [for]="key">{{ element.value.title }}</label>
     </p-floatlabel>
     <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>

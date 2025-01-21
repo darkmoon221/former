@@ -6,8 +6,8 @@
   -->
 <div [formGroup]="formGroup">
   <div>
-    <span class="flex flex-col gap-1">
-      <label class="underline font-medium" [for]="key">{{ element.value.title }}</label>
+    <span [class]="field.wrapperClass">
+      <label [class]="field.labelClass" [for]="key">{{ element.value.title }}</label>
       <span [id]="key">{{ control.value }}</span>
     </span>
   </div>

@@ -5,19 +5,13 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <p-inputgroup class="mt-6">
+  <p-inputgroup [class]="field.wrapperClass">
     <p-inputgroup-addon *ngIf="field.icon">{{ field.icon }}</p-inputgroup-addon>
-    <input pInputText [id]="key" [name]="key" [class]="'p-inputtext-sm w-full'" [formControlName]="key" [placeholder]="field.title" [pKeyFilter]="field.keyFilter" />
+    <p-floatlabel [variant]="field.floatLabel ? field.floatLabel : 'over'">
+      <input pInputText [id]="key" [name]="key" [formControlName]="key" [pKeyFilter]="field.keyFilter" />
+      <label [for]="key">{{ element.value.title }}</label>
+    </p-floatlabel>
     <p-inputgroup-addon *ngIf="field.unit">{{ field.unit }}</p-inputgroup-addon>
   </p-inputgroup>
-
-  <!--  <div class="p-inputgroup mt-6">-->
-  <!--    <span class="p-float-label mt-6">-->
-  <!--    <span *ngIf="field.icon" class="p-inputgroup-addon">$</span>-->
-  <!--    <input pInputText [id]="key" [name]="key" [class]="'p-inputtext-sm w-full'" [formControlName]="key" [placeholder]="field.title" [pKeyFilter]="field.keyFilter" />-->
-  <!--      <label [for]="key">{{element.value.title}}</label>-->
-  <!--    <span *ngIf="field.unit" class="p-inputgroup-addon">{{ field.unit }}</span>-->
-  <!--    </span>-->
-  <!--  </div>-->
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
 </div>

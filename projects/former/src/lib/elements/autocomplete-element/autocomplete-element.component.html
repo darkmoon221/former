@@ -5,11 +5,11 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <p-floatlabel class="mt-6" variant="on">
+  <p-floatlabel [class]="field.wrapperClass" [variant]="field.floatLabel ? field.floatLabel : 'over'">
     <p-autoComplete
       #autoCompleteElement
       [formControlName]="key"
-      [suggestions]="filteredSuggestions"
+      [suggestions]="(filteredSuggestions$ | async) || []"
       [optionLabel]="field.field"
       (completeMethod)="filter($event)"
       [style]="{ width: field.width ?? '100%' }"

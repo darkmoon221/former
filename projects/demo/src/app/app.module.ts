@@ -22,12 +22,13 @@ import { ActionExampleComponent } from './action-example/action-example.componen
 import { TestComponentComponent } from './test-component/test-component.component';
 import { TemplateExampleComponent } from './template-example/template-example.component';
 import Aura from '@primeng/themes/aura';
-import Material from '@primeng/themes/material';
-import Lara from '@primeng/themes/lara';
+
 import { providePrimeNG } from 'primeng/config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { definePreset } from '@primeng/themes';
 import { FormerModule } from 'former';
+import { AutocompleteExampleComponent } from './elements/autocomplete-example/autocomplete-example.component';
+import { IntermediateExampleComponent } from './elements/intermediate-example/intermediate-example.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,6 +38,24 @@ const appRoutes: Routes = [
   {
     path: 'all',
     component: AllElementsExampleComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'autocomplete',
+        pathMatch: 'full',
+      },
+      {
+        path: 'autocomplete',
+        component: AutocompleteExampleComponent,
+        pathMatch: 'full',
+      },
+      {
+        path: 'intermediate',
+        component: IntermediateExampleComponent,
+        pathMatch: 'full',
+      },
+    ],
+    // component: AllElementsExampleComponent,
   },
   {
     path: 'validation',
@@ -61,7 +80,7 @@ const MyPreset = definePreset(Aura, {
 });
 
 @NgModule({
-  declarations: [AppComponent, ValidationExampleComponent, AllElementsExampleComponent, LayoutExampleComponent, ActionExampleComponent, TestComponentComponent, TemplateExampleComponent],
+  declarations: [AppComponent, ValidationExampleComponent, AllElementsExampleComponent, LayoutExampleComponent, ActionExampleComponent, TestComponentComponent, TemplateExampleComponent, AutocompleteExampleComponent, IntermediateExampleComponent],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -80,6 +99,15 @@ const MyPreset = definePreset(Aura, {
     ReactiveFormsModule,
     RouterOutlet,
   ],
-  providers: [provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync(), providePrimeNG({ theme: { preset: MyPreset, options: { darkModeSelector: true } } })],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: MyPreset,
+        options: { darkModeSelector: true },
+      },
+    }),
+  ],
 })
 export class AppModule {}

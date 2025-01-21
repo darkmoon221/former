@@ -4,7 +4,7 @@
   ~
   ~ Please see LICENCE for complete licence text.
   -->
-<div [formGroup]="formGroup" class="mt-6 flex items-center gap-1">
+<div [formGroup]="formGroup" [class]="field.wrapperClass">
   <p-checkbox [formControlName]="key" [value]="field.value" [id]="key"></p-checkbox>
   <label for="{{ key }}">{{ field.title }}</label>
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>

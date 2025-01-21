@@ -13,6 +13,7 @@ import { FormerModule } from 'former';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TestComponentComponent } from './test-component/test-component.component';
+import { provideHttpClient } from '@angular/common/http';
 
 const primeNg = [TabMenuModule];
 
@@ -32,6 +33,6 @@ const primeNg = [TabMenuModule];
     ...primeNg,
   ],
   exports: [CommonModule, ReactiveFormsModule, TranslateModule, FormerModule, RouterTestingModule, ...primeNg, TestComponentComponent],
-  providers: [TranslateService, TranslateStore],
+  providers: [TranslateService, TranslateStore, provideHttpClient()],
 })
 export class TestingModule {}

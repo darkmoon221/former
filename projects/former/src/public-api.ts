@@ -9,3 +9,4 @@ export * from './lib/generated-form-actions/generated-form-actions.component';
 export * from './lib/model/former.model';
 export * from './lib/model/former.enum';
 export * from './lib/directive/template-name.directive';
+export * from './lib/model/elements/autocomplete.model';

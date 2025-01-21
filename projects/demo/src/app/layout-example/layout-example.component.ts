@@ -21,25 +21,31 @@ export class LayoutExampleComponent implements AfterContentChecked {
   nestedGrid: Elements = {
     nestedGrid: {
       type: ElementType.GridLayoutElement,
-      class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6 ',
+      class: 'flex flex-row',
       elements: {
         left: {
           type: ElementType.GridColumnElement,
-          class: 'col bg-orange',
+          class: 'basis-1/2 bg-orange',
           elements: {
             text_3_2_1: {
               type: ElementType.TextElement,
               title: 'Text 3_2_1',
+              cssClass: 'w-full',
+              wrapperClass: 'mt-6',
+              floatLabel: 'on',
             },
           },
         },
         right: {
           type: ElementType.GridColumnElement,
-          class: 'col bg-gray',
+          class: 'basis-1/2 bg-gray',
           elements: {
             text_3_2_2: {
               type: ElementType.TextElement,
               title: 'Text 3_2_2',
+              cssClass: 'w-full',
+              wrapperClass: 'mt-6',
+              floatLabel: 'on',
             },
           },
         },
@@ -52,25 +58,31 @@ export class LayoutExampleComponent implements AfterContentChecked {
     elements: {
       rowOne: {
         type: ElementType.GridLayoutElement,
-        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
+        class: 'flex flex-row',
         elements: {
           col_1_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-blue',
+            class: 'basis-1/2 bg-blue',
             elements: {
               text_1_1: {
                 type: ElementType.TextElement,
                 title: 'Text 1_1',
+                cssClass: 'w-full',
+                wrapperClass: 'mt-6',
+                floatLabel: 'on',
               },
             },
           },
           col_1_2: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-red',
+            class: 'basis-1/2 bg-red',
             elements: {
               text_1_2: {
                 type: ElementType.TextElement,
                 title: 'Text 1_2',
+                cssClass: 'w-full',
+                wrapperClass: 'mt-6',
+                floatLabel: 'on',
               },
             },
           },
@@ -78,15 +90,18 @@ export class LayoutExampleComponent implements AfterContentChecked {
       },
       rowTwo: {
         type: ElementType.GridLayoutElement,
-        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
+        class: 'flex flex-row',
         elements: {
           col_2_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-green',
+            class: 'basis-full bg-green',
             elements: {
               text_2_1: {
                 type: ElementType.TextElement,
                 title: 'Text 2_1',
+                cssClass: 'w-full',
+                wrapperClass: 'mt-6',
+                floatLabel: 'on',
               },
             },
           },
@@ -94,25 +109,31 @@ export class LayoutExampleComponent implements AfterContentChecked {
       },
       rowThree: {
         type: ElementType.GridLayoutElement,
-        class: 'grid grid-cols-12 gap-4 grid-cols-12 gap-6',
+        class: 'flex flex-row',
         elements: {
           col_3_1: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-yellow',
+            class: 'basis-1/2 bg-yellow',
             elements: {
               text_3_1_1: {
                 type: ElementType.TextElement,
                 title: 'Text 3_1_1',
+                cssClass: 'w-full',
+                wrapperClass: 'mt-6',
+                floatLabel: 'on',
               },
               text_3_1_2: {
                 type: ElementType.TextElement,
                 title: 'Text 3_1_2',
+                cssClass: 'w-full',
+                wrapperClass: 'mt-6',
+                floatLabel: 'on',
               },
             },
           },
           col_3_2: {
             type: ElementType.GridColumnElement,
-            class: 'col bg-pink',
+            class: 'basis-1/2 bg-pink',
             elements: this.nestedGrid,
           },
         },

@@ -22,6 +22,9 @@ export class ValidationExampleComponent implements AfterContentChecked {
       text: {
         type: ElementType.TextElement,
         title: 'TextElement',
+        cssClass: 'w-full',
+        wrapperClass: 'mt-6',
+        floatLabel: 'on',
         validators: [
           {
             validationType: ValidationType.Required,
@@ -32,6 +35,9 @@ export class ValidationExampleComponent implements AfterContentChecked {
       email: {
         type: ElementType.TextElement,
         title: 'TextElement with Email Constraint',
+        cssClass: 'w-full',
+        wrapperClass: 'mt-6',
+        floatLabel: 'on',
         validators: [
           {
             validationType: ValidationType.Required,
@@ -46,6 +52,9 @@ export class ValidationExampleComponent implements AfterContentChecked {
       name: {
         type: ElementType.TextElement,
         title: 'TextElement with required, pattern and minLength',
+        cssClass: 'w-full',
+        wrapperClass: 'mt-6',
+        floatLabel: 'on',
         validators: [
           {
             validationType: ValidationType.Required,

@@ -1,62 +1,20 @@
-/*
- * Apache-2.0 Licence
- * Copyright (c) 2023 Tobias Kronschnabl
- *
- * Please see LICENCE for complete licence text.
- */
 import { AfterContentChecked, ChangeDetectorRef, Component, inject } from '@angular/core';
 import { ElementType, FormDefinition } from 'former';
-import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
 import { of } from 'rxjs';
-import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-all-elements-example',
-  templateUrl: './all-elements-example.component.html',
-  styleUrls: ['./all-elements-example.component.scss'],
+  selector: 'app-intermediate-example',
+  templateUrl: './intermediate-example.component.html',
+  styleUrl: './intermediate-example.component.scss',
   standalone: false,
 })
-export class AllElementsExampleComponent implements AfterContentChecked {
+export class IntermediateExampleComponent implements AfterContentChecked {
   readonly cdr = inject(ChangeDetectorRef);
-
-  activeItem: MenuItem | undefined;
-  items: MenuItem[] = [
-    {
-      label: 'Autocomplete',
-      routerLink: 'autocomplete',
-    },
-    {
-      label: 'Intermediate',
-      routerLink: 'intermediate',
-    },
-  ];
-
-  formValues: any = {
-    displayText: 'Test text to display',
-    dropdownWithId: 'en',
-  };
-
-  basicSuggestions$ = of(['Deutschland', 'United Kingdom']);
-
-  suggestions$ = of([
-    { code: 'de', name: 'Deutschland' },
-    { code: 'en', name: 'United Kingdom' },
-  ]);
 
   dropdownOptions$ = of([
     { code: 'de', name: 'DE', additional: 'de' },
     { code: 'en', name: 'EN', additional: 'en' },
   ]);
-
-  // Custom autoCompleteFilter
-  countryFilter = (event: AutoCompleteCompleteEvent, data: any[]) => {
-    console.log(
-      'Custom filter',
-      event.query,
-      data.filter(d => d.toLowerCase().startsWith(event.query.toLowerCase()))
-    );
-    return data.filter(d => d.toLowerCase().startsWith(event.query.toLowerCase()));
-  };
 
   formDefinition: FormDefinition = {
     title: 'All elements example',
@@ -134,7 +92,7 @@ export class AllElementsExampleComponent implements AfterContentChecked {
       card: {
         type: ElementType.CardElement,
         title: 'Card',
-        cssClass: 'mt-12',
+        cssClass: 'mt-6',
         elements: {
           displayText: {
             type: ElementType.DisplayTextElement,
@@ -146,6 +104,11 @@ export class AllElementsExampleComponent implements AfterContentChecked {
       },
     },
     actions: {},
+  };
+
+  formValues: any = {
+    displayText: 'Test text to display',
+    dropdownWithId: 'en',
   };
 
   formChanged($event: any) {

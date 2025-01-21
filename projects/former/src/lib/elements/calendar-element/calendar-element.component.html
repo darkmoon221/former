@@ -5,8 +5,8 @@
   ~ Please see LICENCE for complete licence text.
   -->
 <div [formGroup]="formGroup">
-  <p-floatlabel class="mt-6">
-    <p-datePicker [id]="key" [name]="key" [formControlName]="key" [dateFormat]="element.value.dateFormat" [styleClass]="'w-full'"></p-datePicker>
+  <p-floatlabel [class]="field.wrapperClass" [variant]="field.floatLabel ? field.floatLabel : 'over'">
+    <p-datePicker [id]="key" [name]="key" [formControlName]="key" [dateFormat]="element.value.dateFormat" [styleClass]="element.value.styleClass" [panelStyle]="{ minWidth: 'initial' }"></p-datePicker>
     <label [for]="key">{{ element.value.title }}</label>
   </p-floatlabel>
   <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>

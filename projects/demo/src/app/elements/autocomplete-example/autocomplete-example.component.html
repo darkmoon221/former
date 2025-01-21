@@ -1,0 +1,7 @@
+<div class="mx-6">
+  <lib-generated-form [formDefinition]="formDefinition" [formValues]="formValues" (changesEvent)="formChanged($event)"></lib-generated-form>
+
+  <div class="mt-6">
+    <pre>{{ formValues | json }}</pre>
+  </div>
+</div>

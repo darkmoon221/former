@@ -6,18 +6,8 @@
   -->
 <div [formGroup]="formGroup">
   <div>
-    <p-floatlabel class="mt-6">
-      <p-inputNumber
-        [id]="key"
-        [name]="key"
-        [mode]="mode"
-        [currency]="currency"
-        [locale]="field.locale"
-        [minFractionDigits]="field.minFractionDigits"
-        [maxFractionDigits]="field.maxFractionDigits"
-        [class]="'w-full'"
-        [styleClass]="'w-full'"
-        [formControlName]="key" />
+    <p-floatlabel [class]="field.wrapperClass" [variant]="field.floatLabel ? field.floatLabel : 'over'">
+      <p-inputNumber [id]="key" [name]="key" [mode]="mode" [currency]="currency" [locale]="field.locale" [minFractionDigits]="field.minFractionDigits" [maxFractionDigits]="field.maxFractionDigits" [class]="field.cssClass" [formControlName]="key" />
       <label [for]="key">{{ element.value.title }}</label>
     </p-floatlabel>
     <lib-validation-error [control]="control" [key]="key" [field]="field"></lib-validation-error>
