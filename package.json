@@ -40,7 +40,7 @@
     "@angular-devkit/build-angular": "^19.1.2",
     "@angular/cli": "~19.1.2",
     "@angular/compiler-cli": "^19.1.1",
-    "@types/jasmine": "~5.1.5",
+    "@types/jasmine": "~5.1.7",
     "angular-eslint": "19.0.2",
     "autoprefixer": "^10.4.20",
     "commit-and-tag-version": "^12.5.0",
